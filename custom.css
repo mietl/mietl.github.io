@@ -1,0 +1,174 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>:root {
+  --color-primary: #F0908C !important;
+  --color-primary-bg: rgba(215, 175, 168,.27) !important;
+  /* --color-primary:#e587a7; */
+  /* --color-primary-bg: rgba(77, 166, 255, 0.15); */
+  /* --color-primary-bg: rgba(240, 144, 140,0.24); */
+  /* --color-primary-bg: rgba(254, 105, 49,0.12); */
+  /* --color-primary-bg: rgba(118, 130, 182,0.15); */
+  /* color: #7682b6; */
+  /* --color-primary: #4da6ff; */
+}
+
+/* #nexmoe-header .nexmoe-avatar {
+  box-shadow: none;
+}
+
+
+.nexmoe-post-cover img[src*="cover.jpg"]{
+  object-position: 0 -110px;
+  object-position: 0 31%;
+} */
+
+code {
+  font-family: FiraCode, Consolas, Monaco, monospace !important;
+}
+
+.gsc-main {
+  width: 99% !important;
+}
+
+
+#nexmoe-search-space{
+  background: rgba(10,10,10,0.24);
+}
+
+/* 代码高亮 */
+.hljs {
+  color: #e4dfd7;
+  background: #2b312c;
+}
+
+.hljs-subst {
+  color: #57c3c2;
+}
+
+.hljs-comment {
+  color: #617172;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
+.hljs-section {
+  color: #d276a3;
+}
+
+.hljs-attr {
+  color: #96C24E;
+}
+
+.hljs-attribute {
+  color: #fb9968;
+}
+
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag {
+  color: #c8adc4;
+}
+
+.hljs-selector-class {
+  color: #F07C82;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr {
+  color: #f9d367;
+}
+
+.hljs-meta,
+.hljs-selector-pseudo {
+  color: #EE3F4D;
+}
+
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  color: #FB9968;
+}
+
+.hljs-bullet,
+.hljs-code {
+  color: #EEA6B7;
+}
+
+.hljs-meta .hljs-string {
+  color: #134857;
+}
+
+.hljs-deletion {
+  color: #D276A3;
+}
+
+.hljs-addition {
+  color: #2e317c;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-formula,
+.hljs-operator,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+}
+
+/* hbe 文章加密样式 */ 
+.hbe-input-field {
+  color: #ed986f !important;
+}
+
+.hbe-button{
+  background: rgb(215, 175, 168) !important;
+  text-align: center !important;
+  border-bottom: 0 !important;
+  font-size: 0 !important;
+}
+
+.hbe-button:before{
+  content: '藏起来T‸T';
+  font-size: 15px !important;
+}
+
+.hbe-button:after{
+  display: none !important;
+}
+
+.hbe-input-field-default{
+  color: #f7c5ba !important;
+}
+
+.hbe-input-label-default{
+  font-size: 20px !important;
+}
+
+.hbe-input-label-default::before{
+  background:unset !important;
+}
+
+.hbe-input-label-default::after{
+  background:#fc7756 !important;
+  background: rgb(215, 175, 168) !important;
+}
+
+.hbe-input-field-default:focus + .hbe-input-label-default::after,
+.hbe-input--filled .hbe-input-label-default::after {
+	opacity: unset !important;
+}
