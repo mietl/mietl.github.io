@@ -9,13 +9,13 @@
 <meta name="description" content="1. 动画初步在 Flutter 中，动画可以让应用程序更加生动和具有吸引力。Flutter 中的动画是基于抽象类 Animation 实现的，Animation 对象 用于描述动画状态和取值范围，负责生成动画的值和当前动画的状态通过监听动画的状态变化，我们可以根据当前的动画值来重新构建 widget 更新界面的显示效果。 与 Animation 一起使用的常用类包括：  AnimationCon">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter 动画">
-<meta property="og:url" content="http://mieai.github.io/2023/07/18/flutter/animations/index.html">
+<meta property="og:url" content="http://nexmie.github.io/2023/07/18/flutter/animations/index.html">
 <meta property="og:site_name" content="TのDM">
 <meta property="og:description" content="1. 动画初步在 Flutter 中，动画可以让应用程序更加生动和具有吸引力。Flutter 中的动画是基于抽象类 Animation 实现的，Animation 对象 用于描述动画状态和取值范围，负责生成动画的值和当前动画的状态通过监听动画的状态变化，我们可以根据当前的动画值来重新构建 widget 更新界面的显示效果。 与 Animation 一起使用的常用类包括：  AnimationCon">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-18T08:40:39.000Z">
-<meta property="article:modified_time" content="2023-09-17T10:48:11.447Z">
-<meta property="article:author" content="mieai">
+<meta property="article:modified_time" content="2023-10-05T09:28:12.627Z">
+<meta property="article:author" content="nexmie">
 <meta property="article:tag" content="Flutter">
 <meta name="twitter:card" content="summary">
 
@@ -23,15 +23,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1694947717820">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696498115847">
 
-<link rel="stylesheet" href="/css/style.css?v=1694947717820">
+<link rel="stylesheet" href="/css/style.css?v=1696498115847">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1694947717820">
+        <link rel="stylesheet" href="/custom.css?v=1696498115847">
     
 
 
@@ -41,19 +41,19 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1694947717820"></script>
+<script async src="/js/app.js?v=1696498115847"></script>
 
  
 
 
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="TのDM" type="application/atom+xml">
-</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/bg.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mieai"><img src="/images/avatar.jpeg" alt="mieai"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/bg.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="nexmie"><img src="/images/avatar.jpeg" alt="nexmie"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
   <div class="nexmoe-avatar mdui-ripple">
-    <a href="/" title="mieai">
+    <a href="/" title="nexmie">
       <img
         src="/images/avatar.jpeg"
-        alt="mieai"
-        alt="mieai"
+        alt="nexmie"
+        alt="nexmie"
       />
     </a>
   </div>
@@ -117,7 +117,7 @@
 	<div class="nexmoe-widget nexmoe-social">
 		<a
 			class="mdui-ripple"
-			href="https://github.com/mieai/"
+			href="https://github.com/nexmie/"
 			target="_blank"
 			mdui-tooltip="{content: 'GitHub'}"
 			style="
@@ -157,6 +157,35 @@
 		>
 	</div>
 </div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/09/15/sui-xiang/">随想</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/14/bookmark/">阅读书单</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/18/flutter/animations/">Flutter 动画</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/05/dear_diary/2023-7-5/">2023-7-5</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/09/dear_diary/2023-follow-up/">2023 3.9</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
    
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章分类</h3>
@@ -221,39 +250,10 @@
   </div>
 
 
-   
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">最新文章</h3>
-    <div class="nexmoe-widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/09/15/sui-xiang/">随想</a>
-          </li>
-        
-          <li>
-            <a href="/2023/09/14/bookmark/">阅读书单</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/18/flutter/animations/">Flutter 动画</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/05/dear_diary/2023-7-5/">2023-7-5</a>
-          </li>
-        
-          <li>
-            <a href="/2023/03/09/dear_diary/2023-follow-up/">2023 3.9</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
   
 
   <div class="nexmoe-copyright">
-    &copy; 2023 mieai
+    &copy; 2023 nexmie
     Powered by
     <!-- <a href="http://hexo.io/" target="_blank">Hexo</a> -->
     <!-- & -->
@@ -353,8 +353,8 @@
   
       
     <div class="nexmoe-post-copyright">
-        <strong>本文作者：</strong>mieai<br>
-        <strong>本文链接：</strong><a href="http://mieai.github.io/2023/07/18/flutter/animations/" title="http:&#x2F;&#x2F;mieai.github.io&#x2F;2023&#x2F;07&#x2F;18&#x2F;flutter&#x2F;animations&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mieai.github.io&#x2F;2023&#x2F;07&#x2F;18&#x2F;flutter&#x2F;animations&#x2F;</a><br>
+        <strong>本文作者：</strong>nexmie<br>
+        <strong>本文链接：</strong><a href="http://nexmie.github.io/2023/07/18/flutter/animations/" title="http:&#x2F;&#x2F;nexmie.github.io&#x2F;2023&#x2F;07&#x2F;18&#x2F;flutter&#x2F;animations&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;nexmie.github.io&#x2F;2023&#x2F;07&#x2F;18&#x2F;flutter&#x2F;animations&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -372,13 +372,13 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1694947717754"></script>
+    <script async src="/js/copy-codeblock.js?v=1696498115780"></script>
   
 
   
       <div class="nexmoe-post-footer">
           <script src="https://giscus.app/client.js"
-    data-repo="mieai/mieai.github.io"
+    data-repo="nexmie/nexmie.github.io"
     data-repo-id="R_kgDOJgD8TA"
     data-category="General"
     data-category-id="DIC_kwDOJgD8TM4CZVbm"
