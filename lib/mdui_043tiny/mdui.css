@@ -333,7 +333,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    font-size: 15px !important;
+    font-size: 15px;
   }
 }
 body *::-webkit-scrollbar {
