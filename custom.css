@@ -1,24 +1,10 @@
 :root {
   --color-primary: #F0908C !important;
-  --color-primary-bg: rgba(215, 175, 168,.27) !important;
-  /* --color-primary:#e587a7; */
-  /* --color-primary-bg: rgba(77, 166, 255, 0.15); */
-  /* --color-primary-bg: rgba(240, 144, 140,0.24); */
-  /* --color-primary-bg: rgba(254, 105, 49,0.12); */
-  /* --color-primary-bg: rgba(118, 130, 182,0.15); */
+  --color-primary-bg: #F3ECE6 !important;
   /* color: #7682b6; */
   /* --color-primary: #4da6ff; */
 }
 
-/* #nexmoe-header .nexmoe-avatar {
-  box-shadow: none;
-}
-
-
-.nexmoe-post-cover img[src*="cover.jpg"]{
-  object-position: 0 -110px;
-  object-position: 0 31%;
-} */
 
 code {
   font-family: FiraCode, Consolas, Monaco, monospace !important;
