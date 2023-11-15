@@ -1,11 +1,18 @@
 :root {
-  /* --color-primary: #fe6931; */
   --color-primary: #F0908C !important;
-  /* --color-primary-bg: rgba(240, 145, 142,.1) */
-
-  --color-primary-bg: rgba(231, 106, 141, .1);
-   
+  --color-primary-bg: rgb(209, 177, 169,.1)
+  /* -color-primary-bg: rgba(240, 145, 142,.1); */
+  /* --color-primary-bg: rgba(231, 106, 141, .1); */
 }
+
+/* .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true,
+.nexmoe-post .nexmoe-post-copyright a,
+article a,
+.nexmoe-toc a:hover,
+.nexmoe-widget-title{
+    --color-primary: #F0908C !important;
+} */
+
 
 article h2:after{
   color: #fe6931;

@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="Git分支学习 Git分支">
+<meta name="description" content="Git 分支学习 Git 分支远程分支">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git branch">
-<meta property="og:url" content="http://mietl.github.io/2023/11/06/git/git-branch/index.html">
+<meta property="og:url" content="http://mietl.github.io/2023/11/15/git/git-branch/index.html">
 <meta property="og:site_name" content="TのDM">
-<meta property="og:description" content="Git分支学习 Git分支">
+<meta property="og:description" content="Git 分支学习 Git 分支远程分支">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-06T12:11:13.828Z">
-<meta property="article:modified_time" content="2023-11-06T12:11:13.828Z">
+<meta property="article:published_time" content="2023-11-15T14:36:14.381Z">
+<meta property="article:modified_time" content="2023-11-15T14:36:14.381Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -23,15 +23,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1699272688238">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700059003428">
 
-<link rel="stylesheet" href="/css/style.css?v=1699272688238">
+<link rel="stylesheet" href="/css/style.css?v=1700059003428">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1699272688238">
+        <link rel="stylesheet" href="/custom.css?v=1700059003428">
     
 
 
@@ -41,7 +41,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1699272688238"></script>
+<script async src="/js/app.js?v=1700059003428"></script>
 
  
 
@@ -174,11 +174,11 @@
       <ul>
         
           <li>
-            <a href="/2023/11/06/git/git-branch/">Git branch</a>
+            <a href="/2023/11/15/git/git-branch/">Git branch</a>
           </li>
         
           <li>
-            <a href="/2023/11/06/git/git-started/">Git started</a>
+            <a href="/2023/11/15/git/git-started/">Git started</a>
           </li>
         
           <li>
@@ -283,7 +283,7 @@
     
     <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2023年11月06日</a>
+        <a class="nexmoefont icon-calendar-fill">2023年11月15日</a>
         
         
     </div>
@@ -294,8 +294,8 @@
     
 </div>
 
-    <p>Git分支学习</p>
-<h2 id="Git分支"><a href="#Git分支" class="headerlink" title="Git分支"></a>Git分支</h2>
+    <p>Git 分支学习</p>
+<h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2>
     
   </article>
 
@@ -303,7 +303,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>mietl<br>
-        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/06/git/git-branch/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;06&#x2F;git&#x2F;git-branch&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;06&#x2F;git&#x2F;git-branch&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/15/git/git-branch/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;15&#x2F;git&#x2F;git-branch&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;15&#x2F;git&#x2F;git-branch&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -321,7 +321,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1699272688155"></script>
+    <script async src="/js/copy-codeblock.js?v=1700059003348"></script>
   
 
   
@@ -355,7 +355,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text">Git分支</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text">Git 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">2.</span> <span class="toc-text">远程分支</span></a></li></ol>
                 </div>
             </button>
             
