@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>TypeScript学习 - T:DM</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="TS是一个可选的静态的类型系统 如何进行类型约束通过在变量、函数参数、返回值返回值 位置加上:类型进行标注 let name:string &#x3D; &amp;#x27;mietl&amp;#x27;;function foo(n:number):number&amp;#123;  return number;&amp;#125; 添加类型约束后当你name&#x3D;124赋值为数字124,TS会进行类型检查，变量要求为string类型，但接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript学习">
+<meta property="og:url" content="http://mietl.github.io/2023/11/16/typescript-mark/index.html">
+<meta property="og:site_name" content="T:DM">
+<meta property="og:description" content="TS是一个可选的静态的类型系统 如何进行类型约束通过在变量、函数参数、返回值返回值 位置加上:类型进行标注 let name:string &#x3D; &amp;#x27;mietl&amp;#x27;;function foo(n:number):number&amp;#123;  return number;&amp;#125; 添加类型约束后当你name&#x3D;124赋值为数字124,TS会进行类型检查，变量要求为string类型，但接">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-16T20:36:30.000Z">
+<meta property="article:modified_time" content="2023-11-16T15:37:43.284Z">
+<meta property="article:author" content="mietl">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700149092075">
+
+<link rel="stylesheet" href="/css/style.css?v=1700149092075">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1700149092075">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1700149092076"></script>
+
+ 
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/bg.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpeg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+  <div class="nexmoe-avatar mdui-ripple">
+    <a href="/" title="mietl">
+      <img
+        src="/images/avatar.jpeg"
+        alt="mietl"
+        alt="mietl"
+      />
+    </a>
+  </div>
+  <div class="nexmoe-count">
+    <div><span>文章</span>19</div>
+    <div><span>标签</span>9</div>
+    <div>
+      <span>分类</span>5
+    </div>
+  </div>
+  <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/"
+      title="回到首页"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-home"
+      ></i>
+      <div class="mdui-list-item-content">回到首页</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/archive.html"
+      title="文章归档"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-container"
+      ></i>
+      <div class="mdui-list-item-content">文章归档</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/PY.html"
+      title="我的朋友"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-unorderedlist"
+      ></i>
+      <div class="mdui-list-item-content">我的朋友</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/about.html"
+      title="关于博主"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-info-circle"
+      ></i>
+      <div class="mdui-list-item-content">关于博主</div>
+    </a>
+    
+  </div>
+
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+   <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://github.com/mietl/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/null"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/16/ssr-nuxt/">ssr-nuxt</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/16/typescript-mark/">TypeScript学习</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/16/git/git-branch/">Git branch</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/16/git/git-started/">Git started</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/15/sui-xiang/">随想</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Dear-diary/">Dear diary</a>
+          <span class="category-list-count">11</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Flutter/">Flutter</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Git/">Git</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/TypeScipt/">TypeScipt</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+   
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/2022/" style="font-size: 17.5px;">2022</a> <a href="/tags/2023/" style="font-size: 15px;">2023</a> <a href="/tags/Flutter/" style="font-size: 10px;">Flutter</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Nuxt/" style="font-size: 10px;">Nuxt</a> <a href="/tags/SSR/" style="font-size: 10px;">SSR</a> <a href="/tags/T/" style="font-size: 20px;">T</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 12.5px;">前端</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 12.5px;">记录</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(9);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2023/">2023</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archive/2022/">2022</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+  
+
+  <div class="nexmoe-copyright">
+    &copy; 2023 mietl
+    Powered by
+    <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank"
+      >Nexmoe</a
+    >
+    
+  </div>
+</div>
+<!-- .nexmoe-drawer -->
+</div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="/images/cover/bg.jpg" alt="TypeScript学习" loading="lazy">
+            <h1>TypeScript学习</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年11月16日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/TypeScipt/">TypeScipt</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>TS是一个可选的静态的类型系统</p>
+<h4 id="如何进行类型约束"><a href="#如何进行类型约束" class="headerlink" title="如何进行类型约束"></a>如何进行类型约束</h4><p>通过在变量、函数参数、返回值返回值 位置加上<code>:类型</code>进行标注</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><code class="hljs TypeScript"><span class="hljs-keyword">let</span> <span class="hljs-attr">name</span>:<span class="hljs-built_in">string</span> = <span class="hljs-string">&#x27;mietl&#x27;</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">n:<span class="hljs-built_in">number</span></span>):<span class="hljs-built_in">number</span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-built_in">number</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>添加类型约束后当你<code>name=124</code>赋值为数字124,TS会进行类型检查，变量要求为string类型，但接收到的为number，当检查出错误时他会提示报错</p>
+<h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><h4 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h4><h4 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h4><h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><h4 id="函数的相关约束"><a href="#函数的相关约束" class="headerlink" title="函数的相关约束"></a>函数的相关约束</h4>
+    
+
+    <nav class="post-nav">
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                 <!-- 先找到与当前文字相同的目录 -->
+                    
+                    
+                         
+                         <!-- 在找到当前文章所在的 index -->
+                            
+                            
+                                 
+                                
+                                
+                                
+                                
+                                
+                            
+                        
+                    
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+    </nav>
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>mietl<br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/16/typescript-mark/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;16&#x2F;typescript-mark&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;16&#x2F;typescript-mark&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1700149091966"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <script src="https://giscus.app/client.js"
+    data-repo="mietl/mietl.github.io"
+    data-repo-id="R_kgDOJgD8TA"
+    data-category="General"
+    data-category-id="DIC_kwDOJgD8TM4CZVbm"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    lazy-load=false
+    crossorigin="anonymous"
+    async>
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.</span> <span class="toc-text">如何进行类型约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">其他类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="toc-number">4.</span> <span class="toc-text">类型推导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">5.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E7%9B%B8%E5%85%B3%E7%BA%A6%E6%9D%9F"><span class="toc-number">6.</span> <span class="toc-text">函数的相关约束</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>

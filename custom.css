@@ -1,17 +1,84 @@
 :root {
-  --color-primary: #F0908C !important;
+  --color-primary: #F09885;
   --color-primary-bg: rgb(209, 177, 169,.1)
-  /* -color-primary-bg: rgba(240, 145, 142,.1); */
-  /* --color-primary-bg: rgba(231, 106, 141, .1); */
 }
 
-/* .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true,
-.nexmoe-post .nexmoe-post-copyright a,
-article a,
-.nexmoe-toc a:hover,
-.nexmoe-widget-title{
+/* CSS */
+/* @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css); */
+
+.nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true{
     --color-primary: #F0908C !important;
-} */
+}
+
+
+/* , Consolas, Monaco, monospace !important */
+code, kbd, samp { font-family: 'Fira Code' !important; }
+
+body{
+  background: #F9F9F9;
+}
+
+article ul li{
+  line-height: 2em !important;
+}
+
+
+.post-nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+
+.post-nav .new,.old{
+  display: flex;
+  align-items: center;
+}
+
+.post-nav .next-page{
+  background-image: url(./images/top_content_carousel_rtl_right.svg);
+
+}
+
+.post-nav .prev-page{
+  background-image: url(./images/top_content_carousel_rtl_left.svg);
+}
+
+.post-nav .page-icon{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-position: center center;
+  background-color: transparent;
+  background-size: 35% auto;
+  cursor: pointer;
+}
+
+
+.nexmoe-bg{
+  opacity: unset !important;
+  filter: unset !important;
+  
+
+  background-image: url(./images/top_bg_tile01.png) !important;
+  background-size: 1367px 1349px !important;
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.nexmoe-post .nexmoe-post-cover h1{
+  font-weight: 600;
+}
+
+.nexmoe-archives .categories a {
+  font-size: 12px;
+  /* height: auto; */
+  height: 94px;
+  width: calc(26.333333333% - 8px);
+}
 
 
 article h2:after{
@@ -19,12 +86,10 @@ article h2:after{
 }
 
 .nexmoe-post-footer{
-  background: #f9f9f9;
+  background: #F9F9F9;
 }
 
-code {
-  font-family: FiraCode, Consolas, Monaco, monospace !important;
-}
+
 
 .gsc-main {
   width: 99% !important;
