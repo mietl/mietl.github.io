@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>TypeScript 学习 - T:DM</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="TS是一个可选的静态的类型系统 如何进行类型约束通过在变量、函数参数、函数返回值 位置加上变量名:类型进行标注 let name:string &#x3D; &amp;#x27;mietl&amp;#x27;;function foo(n:number):number&amp;#123;  return number;&amp;#125;name &#x3D; 2213; &#x2F;&#x2F; error 添加类型约束后，再进行赋时name&#x3D;2214    ts编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript 学习">
+<meta property="og:url" content="http://mietl.github.io/2023/11/16/ts/ts-docs/index.html">
+<meta property="og:site_name" content="T:DM">
+<meta property="og:description" content="TS是一个可选的静态的类型系统 如何进行类型约束通过在变量、函数参数、函数返回值 位置加上变量名:类型进行标注 let name:string &#x3D; &amp;#x27;mietl&amp;#x27;;function foo(n:number):number&amp;#123;  return number;&amp;#125;name &#x3D; 2213; &#x2F;&#x2F; error 添加类型约束后，再进行赋时name&#x3D;2214    ts编">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://mietl.github.io/images/ts/tscheck.jpg">
+<meta property="og:image" content="http://mietl.github.io/images/ts/ts-6133.jpg">
+<meta property="article:published_time" content="2023-11-16T20:36:30.000Z">
+<meta property="article:modified_time" content="2023-11-20T15:01:02.165Z">
+<meta property="article:author" content="mietl">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mietl.github.io/images/ts/tscheck.jpg">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700492471756">
+
+<link rel="stylesheet" href="/css/style.css?v=1700492471756">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1700492471756">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1700492471756"></script>
+
+ 
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/bg.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpeg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+  <div class="nexmoe-avatar mdui-ripple">
+    <a href="/" title="mietl">
+      <img
+        src="/images/avatar.jpeg"
+        alt="mietl"
+        alt="mietl"
+      />
+    </a>
+  </div>
+  <div class="nexmoe-count">
+    <div><span>文章</span>19</div>
+    <div><span>标签</span>9</div>
+    <div>
+      <span>分类</span>5
+    </div>
+  </div>
+  <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/"
+      title="回到首页"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-home"
+      ></i>
+      <div class="mdui-list-item-content">回到首页</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/archive.html"
+      title="文章归档"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-container"
+      ></i>
+      <div class="mdui-list-item-content">文章归档</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/PY.html"
+      title="我的朋友"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-unorderedlist"
+      ></i>
+      <div class="mdui-list-item-content">我的朋友</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/about.html"
+      title="关于博主"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-info-circle"
+      ></i>
+      <div class="mdui-list-item-content">关于博主</div>
+    </a>
+    
+  </div>
+
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+   <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://github.com/mietl/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/null"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/20/git/git-branch/">Git branch</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/20/git/git-started/">Git started</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/16/ssr-nuxt/">ssr-nuxt</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/16/ts/ts-docs/">TypeScript 学习</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/15/sui-xiang/">随想</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Dear-diary/">Dear diary</a>
+          <span class="category-list-count">11</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Flutter/">Flutter</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Git/">Git</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/TypeScipt/">TypeScipt</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+   
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/2022/" style="font-size: 17.5px;">2022</a> <a href="/tags/2023/" style="font-size: 15px;">2023</a> <a href="/tags/Flutter/" style="font-size: 10px;">Flutter</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Nuxt/" style="font-size: 10px;">Nuxt</a> <a href="/tags/SSR/" style="font-size: 10px;">SSR</a> <a href="/tags/T/" style="font-size: 20px;">T</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 12.5px;">前端</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 12.5px;">记录</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(9);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2023/">2023</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archive/2022/">2022</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+  
+
+  <div class="nexmoe-copyright">
+    &copy; 2023 mietl
+    Powered by
+    <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank"
+      >Nexmoe</a
+    >
+    
+  </div>
+</div>
+<!-- .nexmoe-drawer -->
+</div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="/images/cover/bg.jpg" alt="TypeScript 学习" loading="lazy">
+            <h1>TypeScript 学习</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年11月16日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/TypeScipt/">TypeScipt</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>TS是一个可选的静态的类型系统</p>
+<h2 id="如何进行类型约束"><a href="#如何进行类型约束" class="headerlink" title="如何进行类型约束"></a>如何进行类型约束</h2><p>通过在变量、函数参数、函数返回值 位置加上<code>变量名:类型</code>进行标注</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">let</span> <span class="hljs-attr">name</span>:<span class="hljs-built_in">string</span> = <span class="hljs-string">&#x27;mietl&#x27;</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">n:<span class="hljs-built_in">number</span></span>):<span class="hljs-built_in">number</span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-built_in">number</span>;<br>&#125;<br><br>name = <span class="hljs-number">2213</span>; <span class="hljs-comment">// error</span><br><br></code></pre></td></tr></table></figure>
+<p>添加类型约束后，再进行赋时<code>name=2214</code>    <strong>ts编译器</strong>会进行类型检查，变量要求为 <code>string</code> 类型，但接收到的为<code>number</code>，当检查出错误时他会提示报错</p>
+<p><img src="/images/ts/tscheck.jpg"></p>
+<h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><ol>
+<li><p>number</p>
+</li>
+<li><p>string</p>
+</li>
+<li><p>boolean</p>
+</li>
+<li><p>array</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 定义数组的两种方式</span><br><span class="hljs-keyword">let</span> <span class="hljs-attr">arr</span>:<span class="hljs-title class_">Array</span>&lt;<span class="hljs-built_in">number</span>&gt; = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">nums</span>:<span class="hljs-built_in">number</span>[] = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>null 和 undefined</p>
+<p>undefined 和 null 可以作为其他类型的子类型，他们可以赋值给其他类型</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">let</span> name = <span class="hljs-string">&#x27;mietl&#x27;</span>;<br><br>name = <span class="hljs-literal">undefined</span>;<br><br>name = <span class="hljs-literal">null</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>在<code>tsconfig.json</code>中 添加<code>strictNullChecks:true</code>,可以使用更严格的空类型检查，启用后  null 和 undefined 只能赋值给自身。</p>
+</li>
+<li><p>object</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">obj:<span class="hljs-built_in">object</span>,key:<span class="hljs-built_in">string</span></span>)&#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">object</span>.<span class="hljs-title function_">hasOwnProperty</span>(key))<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h4><ol>
+<li><p>联合类型</p>
+</li>
+<li><p>void</p>
+</li>
+<li><p>never</p>
+</li>
+<li><p>字面量类型</p>
+</li>
+<li><p>any类型</p>
+</li>
+</ol>
+<h4 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h4><p>类型推导的特性，能自动推测到出变量的类型，在某些情况下你可以省略类型标注。</p>
+<p>当你的值为字符串类型的他能直接识别</p>
+<p><img src="/images/ts/ts-6133.jpg"></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">n1:<span class="hljs-built_in">number</span>,n2:<span class="hljs-built_in">number</span></span>)&#123;<br>  <span class="hljs-keyword">return</span> n1 + n2;<br>&#125;<br><br><span class="hljs-keyword">const</span> total = <span class="hljs-title function_">sum</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);<br></code></pre></td></tr></table></figure>
+
+<p>上述代码中<code>sum </code>函数中参数都为<code>number</code>类型，返回值<code>n1 + n2 </code>两个<code>number</code>的数值在进行相加后返回值一定是<code>number</code>类型,</p>
+<p>因此 <code>sum</code>的返回值类型标注 可以省略，返回值推导为<code>number</code>类型，在进行赋值时，<code>total</code>类型推导为<code>number</code>类型</p>
+<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><p>当类型在多处要被使用时，如果每个地方都单独写一遍，不利于维护扩展，如果某天对这个类型添加新属性时，需要每个地方都进行修改，可以通过类型别名都方式，为类型定义名称</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">typeof</span> <span class="hljs-title class_">User</span> = &#123;<br>  <span class="hljs-attr">name</span>:<span class="hljs-built_in">string</span><br>  <span class="hljs-attr">age</span>:<span class="hljs-built_in">number</span>,<br>&#125;<br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">user</span>:<span class="hljs-title class_">User</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getUserName</span>(<span class="hljs-params">u:User</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="函数相关约束"><a href="#函数相关约束" class="headerlink" title="函数相关约束"></a>函数相关约束</h2><h4 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h4><p>在函数实现之前，对函数调用对多种情况进行声明</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a:<span class="hljs-built_in">number</span>,b:<span class="hljs-built_in">number</span></span>):<span class="hljs-built_in">number</span>;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a:<span class="hljs-built_in">string</span>,b:<span class="hljs-built_in">string</span></span>):<span class="hljs-built_in">number</span>;<br><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a:<span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span>,b:<span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span></span>):<span class="hljs-built_in">number</span>&#123;<br>  <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> a == <span class="hljs-string">&#x27;string&#x27;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> b == <span class="hljs-string">&#x27;string&#x27;</span>)&#123;<br>    <span class="hljs-keyword">return</span> a.<span class="hljs-property">length</span> + b.<span class="hljs-property">length</span>;<br>  &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> a == <span class="hljs-string">&#x27;number&#x27;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> b == <span class="hljs-string">&#x27;number&#x27;</span>)&#123;<br>    <span class="hljs-keyword">return</span> a + b;<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">// 在调用方法时，根据会上面重载声明，进行匹配，只有存在声明对组合才能进行调用</span><br><span class="hljs-keyword">let</span> len = <span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;mietl&#x27;</span>,<span class="hljs-string">&#x27;t&#x27;</span>);<br><span class="hljs-keyword">let</span> num = <span class="hljs-title function_">add</span>(<span class="hljs-number">124</span>,<span class="hljs-number">124</span>);<br><br><span class="hljs-keyword">let</span> test = <span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;123&#x27;</span>,<span class="hljs-number">2323</span>); <span class="hljs-comment">// error</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h4><p>在参数名后加上问号，表示该参数可以不用传递。可选参数必须在必选的后面</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">a:<span class="hljs-built_in">number</span>,b:<span class="hljs-built_in">number</span>,c:<span class="hljs-built_in">number</span>?</span>)&#123;<br>  <span class="hljs-keyword">if</span>(c)&#123;<br>    <span class="hljs-keyword">return</span> a + b + c;<br>  &#125;<br>  <span class="hljs-keyword">return</span> a + b;<br>&#125;<br><br><span class="hljs-title function_">sum</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);<br><span class="hljs-title function_">sum</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>)<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可选参数实际是 number | undefined 组合的联合类型，在JavaScript中未指定的参数会得到undefined</p>
+</blockquote>
+
+    
+
+    <nav class="post-nav">
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+                 <!-- 先找到与当前文字相同的目录 -->
+                    
+                    
+                         
+                         <!-- 在找到当前文章所在的 index -->
+                            
+                            
+                                 
+                                
+                                
+
+                           
+                                
+                                
+                                
+                            
+                        
+                    
+                
+            
+          
+        
+    </nav>
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>mietl<br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/16/ts/ts-docs/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;16&#x2F;ts&#x2F;ts-docs&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;16&#x2F;ts&#x2F;ts-docs&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1700492471660"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <script src="https://giscus.app/client.js"
+    data-repo="mietl/mietl.github.io"
+    data-repo-id="R_kgDOJgD8TA"
+    data-category="General"
+    data-category-id="DIC_kwDOJgD8TM4CZVbm"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    lazy-load=false
+    crossorigin="anonymous"
+    async>
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.</span> <span class="toc-text">如何进行类型约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text">其他类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="toc-number">1.0.3.</span> <span class="toc-text">类型推导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">1.0.4.</span> <span class="toc-text">类型别名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E7%BA%A6%E6%9D%9F"><span class="toc-number">2.</span> <span class="toc-text">函数相关约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-number">2.0.1.</span> <span class="toc-text">函数重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="toc-number">2.0.2.</span> <span class="toc-text">可选参数</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>

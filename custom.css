@@ -14,9 +14,7 @@
 /* , Consolas, Monaco, monospace !important */
 code, kbd, samp { font-family: 'Fira Code' !important; }
 
-body{
-  background: #F9F9F9;
-}
+
 
 article ul li{
   line-height: 2em !important;
@@ -24,13 +22,22 @@ article ul li{
 
 
 .post-nav{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
+  border-top: 1px dashed rgb(215, 175, 168) !important;
+  position: relative;
+  height: 80px;
+  line-height: 80px;
 }
 
+.post-nav .old{
+  right: 0px;
+}
+
+.post-nav .new{
+  left: 0px;
+}
 
 .post-nav .new,.old{
+  position: absolute;
   display: flex;
   align-items: center;
 }
@@ -57,21 +64,6 @@ article ul li{
 }
 
 
-.nexmoe-bg{
-  opacity: unset !important;
-  filter: unset !important;
-  
-
-  background-image: url(./images/top_bg_tile01.png) !important;
-  background-size: 1367px 1349px !important;
-  background-position: center center;
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
-
-.nexmoe-post .nexmoe-post-cover h1{
-  font-weight: 600;
-}
 
 .nexmoe-archives .categories a {
   font-size: 12px;
@@ -195,11 +187,12 @@ article h2:after{
 .hljs-property,
 .hljs-punctuation,
 .hljs-tag {
+  color: #f07c82;
 }
 
 /* hbe 文章加密样式 */ 
 .hbe-input-field {
-  color: #ed986f !important;
+  color: var(--color-primary) !important;
 }
 
 .hbe-button{
@@ -219,20 +212,22 @@ article h2:after{
 }
 
 .hbe-input-field-default{
-  color: #f7c5ba !important;
+  color: rgb(138, 115, 72) !important;
+  padding: 0;
 }
 
-.hbe-input-label-default{
-  font-size: 20px !important;
-}
+
+/* .hbe-input-field-default:focus + .hbe-input-label-default .hbe-input-label-content-default, .hbe-input--filled .hbe-input-label-default .hbe-input-label-content-default{
+  transform: unset !important;
+} */
+
 
 .hbe-input-label-default::before{
   background:unset !important;
 }
 
 .hbe-input-label-default::after{
-  background:#fc7756 !important;
-  background: rgb(215, 175, 168) !important;
+  background: rgb(214, 177, 131) !important;
 }
 
 .hbe-input-field-default:focus + .hbe-input-label-default::after,
