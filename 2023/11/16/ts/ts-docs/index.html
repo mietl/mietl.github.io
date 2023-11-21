@@ -14,9 +14,9 @@
 <meta property="og:description" content="TS是一个可选的静态的类型系统 如何进行类型约束通过在变量、函数参数、函数返回值 位置加上变量名:类型进行标注 let name:string &#x3D; &amp;#x27;mietl&amp;#x27;;function foo(n:number):number&amp;#123;  return number;&amp;#125;name &#x3D; 2213; &#x2F;&#x2F; error 添加类型约束后，再进行赋时name&#x3D;2214    ts编">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mietl.github.io/images/ts/tscheck.jpg">
-<meta property="og:image" content="http://mietl.github.io/images/ts/ts-6133.jpg">
+<meta property="og:image" content="http://mietl.github.io/images/ts/ts_6133.jpg">
 <meta property="article:published_time" content="2023-11-16T20:36:30.000Z">
-<meta property="article:modified_time" content="2023-11-20T15:01:02.165Z">
+<meta property="article:modified_time" content="2023-11-21T13:25:33.817Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -26,15 +26,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700492471756">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700573143066">
 
-<link rel="stylesheet" href="/css/style.css?v=1700492471756">
+<link rel="stylesheet" href="/css/style.css?v=1700573143066">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1700492471756">
+        <link rel="stylesheet" href="/custom.css?v=1700573143066">
     
 
 
@@ -44,7 +44,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1700492471756"></script>
+<script async src="/js/app.js?v=1700573143066"></script>
 
  
 
@@ -177,11 +177,11 @@
       <ul>
         
           <li>
-            <a href="/2023/11/20/git/git-branch/">Git branch</a>
+            <a href="/2023/11/21/git/git-branch/">Git branch</a>
           </li>
         
           <li>
-            <a href="/2023/11/20/git/git-started/">Git started</a>
+            <a href="/2023/11/21/git/git-started/">Git started</a>
           </li>
         
           <li>
@@ -347,25 +347,34 @@
 <figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">obj:<span class="hljs-built_in">object</span>,key:<span class="hljs-built_in">string</span></span>)&#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">object</span>.<span class="hljs-title function_">hasOwnProperty</span>(key))<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h4><ol>
-<li><p>联合类型</p>
+<li><p>联合类型<br>多种类型的联合，满足任意一种类型即可</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">let</span> <span class="hljs-attr">gender</span>: <span class="hljs-string">&quot;male&quot;</span> | <span class="hljs-string">&quot;famale&quot;</span>;<br><br></code></pre></td></tr></table></figure></li>
+<li><p>void<br>表示没有返回值。当函数没有明确指定返回值类型或者返回类型被指定为<code>void</code>时，该函数被认为不返回任何值。</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">print</span>(<span class="hljs-params"></span>):<span class="hljs-built_in">void</span>&#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;hhh&#x27;</span>)<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>never<br>表示永远不会发生赋值的类型</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">loop</span>(<span class="hljs-params"></span>):<span class="hljs-built_in">never</span>&#123;<br>  <span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;loop&#x27;</span>)<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">throwErr</span>(<span class="hljs-params"></span>):<span class="hljs-built_in">never</span>&#123;<br>  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>();<br>&#125;<br><br><span class="hljs-comment">// 实际应用</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">format</span>(<span class="hljs-params">value:<span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span></span>)&#123;<br>  <span class="hljs-keyword">switch</span>(<span class="hljs-keyword">typeof</span> value)&#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;string&#x27;</span>:<br>      value.<span class="hljs-title function_">toLowerCase</span>();<br>      <span class="hljs-keyword">break</span>;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;number&#x27;</span>:<br>      value.<span class="hljs-title function_">toFixed</span>();<br>      <span class="hljs-keyword">break</span>;<br>    <span class="hljs-attr">default</span>:<br>      <span class="hljs-comment">// 以上类型都列举完,永远不会执行赋值当操作,才能将value赋值为never类型</span><br>      <span class="hljs-comment">// 当类型没有进行具体的实现，有可能来到default时,检查将失败，无法将值赋值给naver类型的变量</span><br>      <span class="hljs-keyword">const</span> <span class="hljs-attr">check</span>:<span class="hljs-built_in">never</span> = value;<br>  &#125;<br>&#125;<br><span class="hljs-comment">// 利用这点可以约束，value可能的值类型，必须经过case</span><br></code></pre></td></tr></table></figure></li>
+<li><p>字面量类型<br>使用一个值进行约束</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">type</span> <span class="hljs-title class_">Alignment</span> = <span class="hljs-string">&#x27;left&#x27;</span> | <span class="hljs-string">&#x27;right&#x27;</span> | <span class="hljs-string">&#x27;center&#x27;</span>;<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">align</span>:<span class="hljs-title class_">Alignment</span>  = <span class="hljs-string">&#x27;left&#x27;</span><br></code></pre></td></tr></table></figure>
+
 </li>
-<li><p>void</p>
-</li>
-<li><p>never</p>
-</li>
-<li><p>字面量类型</p>
-</li>
-<li><p>any类型</p>
-</li>
+<li><p>any类型<br> 任意类型，any类型可以绕过类型检查，因此any类型的数据可以赋值给任意类型</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">let</span> <span class="hljs-attr">name</span>:<span class="hljs-built_in">any</span> = <span class="hljs-string">&quot;mietl&quot;</span>;<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">num</span>:<span class="hljs-built_in">number</span> = name;<br></code></pre></td></tr></table></figure></li>
+<li><p>元祖类型<br>固定长度，并且数组的每一项类型都确定,通常被用作返回值</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">let</span> <span class="hljs-attr">tuple</span>:[<span class="hljs-built_in">number</span>,<span class="hljs-built_in">string</span>] =  [<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;a&#x27;</span>];<br></code></pre></td></tr></table></figure>
+<p>错误示例</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">n:<span class="hljs-built_in">number</span></span>)&#123;<br>  <span class="hljs-keyword">let</span> arr = [n,<span class="hljs-title class_">String</span>.<span class="hljs-title function_">fromCharCode</span>(n)];<br>  <span class="hljs-keyword">return</span> arr;<br>&#125;<br><span class="hljs-keyword">const</span> [num,charCode] = <span class="hljs-title function_">foo</span>(<span class="hljs-number">65</span>);<br><span class="hljs-comment">// &gt; 错误 无法确定charCode为String类型</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(charCode.<span class="hljs-property">length</span>);<br></code></pre></td></tr></table></figure>
+<p>作为返回值类型使用</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">n:<span class="hljs-built_in">number</span></span>)&#123;<br>  <span class="hljs-keyword">let</span> <span class="hljs-attr">tuple</span>:[<span class="hljs-built_in">number</span>,<span class="hljs-built_in">string</span>] = [n,<span class="hljs-title class_">String</span>.<span class="hljs-title function_">fromCharCode</span>(n)];<br>  <span class="hljs-keyword">return</span> tuple;<br>&#125;<br><br><span class="hljs-keyword">const</span> [num,charCode] = <span class="hljs-title function_">foo</span>(<span class="hljs-number">65</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num,charCode.<span class="hljs-property">length</span>);<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h4><p>类型推导的特性，能自动推测到出变量的类型，在某些情况下你可以省略类型标注。</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><h4 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h4><p>类型推导的特性，能自动推测到出变量的类型，在某些情况下你可以省略类型标注。</p>
 <p>当你的值为字符串类型的他能直接识别</p>
-<p><img src="/images/ts/ts-6133.jpg"></p>
+<p><img src="/images/ts/ts_6133.jpg"></p>
 <figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">n1:<span class="hljs-built_in">number</span>,n2:<span class="hljs-built_in">number</span></span>)&#123;<br>  <span class="hljs-keyword">return</span> n1 + n2;<br>&#125;<br><br><span class="hljs-keyword">const</span> total = <span class="hljs-title function_">sum</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);<br></code></pre></td></tr></table></figure>
 
 <p>上述代码中<code>sum </code>函数中参数都为<code>number</code>类型，返回值<code>n1 + n2 </code>两个<code>number</code>的数值在进行相加后返回值一定是<code>number</code>类型,</p>
 <p>因此 <code>sum</code>的返回值类型标注 可以省略，返回值推导为<code>number</code>类型，在进行赋值时，<code>total</code>类型推导为<code>number</code>类型</p>
-<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><p>当类型在多处要被使用时，如果每个地方都单独写一遍，不利于维护扩展，如果某天对这个类型添加新属性时，需要每个地方都进行修改，可以通过类型别名都方式，为类型定义名称</p>
+<h4 id="类型缩小-narrowing"><a href="#类型缩小-narrowing" class="headerlink" title="类型缩小(narrowing)"></a>类型缩小(narrowing)</h4><p>当对某个变量进行类型判断之后，在判断的语句块中ts就已经可以确定它的类型，typeof可以触发类型缩小。</p>
+<h4 id="非空断言"><a href="#非空断言" class="headerlink" title="非空断言"></a>非空断言</h4><h4 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h4><h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><p>当类型在多处要被使用时，如果每个地方都单独写一遍，不利于维护扩展，如果某天对这个类型添加新属性时，需要每个地方都进行修改，可以通过类型别名都方式，为类型定义名称</p>
 <figure class="highlight ts"><table><tr><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">typeof</span> <span class="hljs-title class_">User</span> = &#123;<br>  <span class="hljs-attr">name</span>:<span class="hljs-built_in">string</span><br>  <span class="hljs-attr">age</span>:<span class="hljs-built_in">number</span>,<br>&#125;<br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">user</span>:<span class="hljs-title class_">User</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getUserName</span>(<span class="hljs-params">u:User</span>)<br></code></pre></td></tr></table></figure>
 
 <h2 id="函数相关约束"><a href="#函数相关约束" class="headerlink" title="函数相关约束"></a>函数相关约束</h2><h4 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h4><p>在函数实现之前，对函数调用对多种情况进行声明</p>
@@ -377,7 +386,7 @@
 <blockquote>
 <p>可选参数实际是 number | undefined 组合的联合类型，在JavaScript中未指定的参数会得到undefined</p>
 </blockquote>
-
+<h4 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h4>
     
 
     <nav class="post-nav">
@@ -455,7 +464,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1700492471660"></script>
+    <script async src="/js/copy-codeblock.js?v=1700573142972"></script>
   
 
   
@@ -489,7 +498,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.</span> <span class="toc-text">如何进行类型约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text">其他类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="toc-number">1.0.3.</span> <span class="toc-text">类型推导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">1.0.4.</span> <span class="toc-text">类型别名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E7%BA%A6%E6%9D%9F"><span class="toc-number">2.</span> <span class="toc-text">函数相关约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-number">2.0.1.</span> <span class="toc-text">函数重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="toc-number">2.0.2.</span> <span class="toc-text">可选参数</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.</span> <span class="toc-text">如何进行类型约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">基本类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text">其他类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="toc-number">2.0.1.</span> <span class="toc-text">类型推导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E7%BC%A9%E5%B0%8F-narrowing"><span class="toc-number">2.0.2.</span> <span class="toc-text">类型缩小(narrowing)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E7%A9%BA%E6%96%AD%E8%A8%80"><span class="toc-number">2.0.3.</span> <span class="toc-text">非空断言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80"><span class="toc-number">2.0.4.</span> <span class="toc-text">类型断言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">2.0.5.</span> <span class="toc-text">类型别名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9B%B8%E5%85%B3%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.</span> <span class="toc-text">函数相关约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-number">3.0.1.</span> <span class="toc-text">函数重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="toc-number">3.0.2.</span> <span class="toc-text">可选参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE"><span class="toc-number">3.0.3.</span> <span class="toc-text">枚举</span></a></li></ol></li></ol></li></ol>
                 </div>
             </button>
             

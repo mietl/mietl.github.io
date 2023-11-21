@@ -6,18 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="Git 分支学习 Git 分支Git的分支 是指向提交对象的可变指针  HEAD指向当前分支  你可以创建多个分支，在不同分支上进行提交 t1 -&gt; t2  -&gt; t3 (main)t1 -&gt; t2   (dev)  你可以很方便创建的中分支进行开发 main分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在mian分支中进行操作时，dev不会受影响，dev依然指向 t">
+<meta name="description" content="Git 分支学习 Git 分支Git的分支 是指向提交对象的可变指针  HEAD指向当前分支  你可以创建多个分支，在不同分支上进行提交 t1 -&gt; t2  -&gt; t3 (main)t1 -&gt; t2   (dev)  可以很方便在不同的分支中进行开发  main 分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在 mian 分支中进行操作时，dev 不会受影响，dev">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git branch">
-<meta property="og:url" content="http://mietl.github.io/2023/11/20/git/git-branch/index.html">
+<meta property="og:url" content="http://mietl.github.io/2023/11/21/git/git-branch/index.html">
 <meta property="og:site_name" content="T:DM">
-<meta property="og:description" content="Git 分支学习 Git 分支Git的分支 是指向提交对象的可变指针  HEAD指向当前分支  你可以创建多个分支，在不同分支上进行提交 t1 -&gt; t2  -&gt; t3 (main)t1 -&gt; t2   (dev)  你可以很方便创建的中分支进行开发 main分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在mian分支中进行操作时，dev不会受影响，dev依然指向 t">
+<meta property="og:description" content="Git 分支学习 Git 分支Git的分支 是指向提交对象的可变指针  HEAD指向当前分支  你可以创建多个分支，在不同分支上进行提交 t1 -&gt; t2  -&gt; t3 (main)t1 -&gt; t2   (dev)  可以很方便在不同的分支中进行开发  main 分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在 mian 分支中进行操作时，dev 不会受影响，dev">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mietl.github.io/images/git/fatal.png">
 <meta property="og:image" content="http://mietl.github.io/images/git/fetch-branch.png">
 <meta property="og:image" content="http://mietl.github.io/images/git/push-default.png">
-<meta property="article:published_time" content="2023-11-20T15:01:02.165Z">
-<meta property="article:modified_time" content="2023-11-20T15:01:02.165Z">
+<meta property="og:image" content="http://mietl.github.io/images/git/merge.png">
+<meta property="og:image" content="http://mietl.github.io/images/git/rebase.png">
+<meta property="article:published_time" content="2023-11-21T13:25:33.817Z">
+<meta property="article:modified_time" content="2023-11-21T13:25:33.817Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -27,15 +29,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700492471736">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700573143049">
 
-<link rel="stylesheet" href="/css/style.css?v=1700492471736">
+<link rel="stylesheet" href="/css/style.css?v=1700573143049">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1700492471736">
+        <link rel="stylesheet" href="/custom.css?v=1700573143049">
     
 
 
@@ -45,7 +47,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1700492471736"></script>
+<script async src="/js/app.js?v=1700573143049"></script>
 
  
 
@@ -178,11 +180,11 @@
       <ul>
         
           <li>
-            <a href="/2023/11/20/git/git-branch/">Git branch</a>
+            <a href="/2023/11/21/git/git-branch/">Git branch</a>
           </li>
         
           <li>
-            <a href="/2023/11/20/git/git-started/">Git started</a>
+            <a href="/2023/11/21/git/git-started/">Git started</a>
           </li>
         
           <li>
@@ -308,7 +310,7 @@
     
     <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2023年11月20日</a>
+        <a class="nexmoefont icon-calendar-fill">2023年11月21日</a>
         
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/Git/">Git</a>
         
@@ -329,8 +331,8 @@
 <p>你可以创建多个分支，在不同分支上进行提交</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">t1 -&gt; t2  -&gt; t3 (main)<br><br>t1 -&gt; t2   (dev)<br></code></pre></td></tr></table></figure>
 
-<p>你可以很方便创建的中分支进行开发</p>
-<p>main分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在mian分支中进行操作时，dev不会受影响，dev依然指向 <code>t2</code>不变</p>
+<p>可以很方便在不同的分支中进行开发</p>
+<p> <code>main</code> 分支，在进行每次提交后， 他都会指向最后一次提交对象，当你在 <code>mian</code> 分支中进行操作时，<code>dev</code> 不会受影响，<code>dev</code> 依然指向 <code>t2</code>不变</p>
 <p>因此你也可以切换到dev中做不同事情</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">t1 -&gt; t2 -&gt; t4 (dev)<br></code></pre></td></tr></table></figure>
 
@@ -355,7 +357,7 @@
 <h2 id="分支的作用"><a href="#分支的作用" class="headerlink" title="分支的作用"></a>分支的作用</h2><p>例入在开发项目时，开发完小目标功能后，添加tag进行标记 ，想进行新功能的开发，开发过程中，原先的tag版本出现问题，你就可以切换到tag版本创建分支完成修复。</p>
 <p>修复后发布新版本，等新功能开发好后，使用 <code> git merge branch-name</code>进行合并</p>
 <h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2><p>远程分支也是一种分支结构，和普通的分支一样，只不过在远程</p>
-<p>与远程仓库建立连接后,设置上游分支后</p>
+<p>本地仓库与远程仓库建立连接后,设置上游分支后</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/main<br></code></pre></td></tr></table></figure>
 
 <p>错误  <strong><u>fatal: the requested upstream branch ‘origin&#x2F;main’ does not exist</u></strong></p>
@@ -364,7 +366,7 @@
 <p>通过<code>git fetch</code>命令来获取最新的远程分支， </p>
 <p><img src="/images/git/fetch-branch.png"></p>
 <p>这样本地就有 <code>origin/main</code> 的分支了</p>
-<h4 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h4><p>在那创建了某个分支后，需要共享他时，通过 <code>git push &lt;remote&gt; &lt;branch&gt;</code>推送到远程</p>
+<h4 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h4><p>在创建某个分支后，需要共享他时，通过 <code>git push &lt;remote&gt; &lt;branch&gt;</code>推送到远程</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git push origin dev<br></code></pre></td></tr></table></figure>
 
 
@@ -379,7 +381,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git checkout --track origin/test<br></code></pre></td></tr></table></figure>
 
 <p>该命令执行后会先去查看远程有没有这个分支，有的话就创建一个本地 <code>test</code> 分支，并跟踪远程分支 <code>test</code> 同时切换到 <code>test</code> 分支。</p>
-<p>你也可以直接省略 –track参数 直接切换到远程分支，作用时相同的。</p>
+<p>你也可以直接省略 <code>--track </code>参数 直接切换到远程分支，作用时相同的。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git checkout <span class="hljs-built_in">test</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>删除远程分支</strong></p>
@@ -405,16 +407,40 @@
 </li>
 <li><p>current<br> 推送当前分支,到远程同名分支、如果不存在则创建</p>
 </li>
-<li><p>upstream<br> 将当前分支推回到上游分支</p>
+<li><p>upstream<br> 将当前分支推送到上游分支</p>
 </li>
 <li><p>simple (2.0 默认值)<br> 将当前分支推送到远程具有相同名称的分支。</p>
 </li>
 </ol>
 <p><a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-push#_configuration">参考链接</a></p>
 <p>更常见的做法是通过  <code>git checkout --track mian </code>  来跟踪远程仓库</p>
-<p>他会检查远程有没有main分支有的话，创建一个本地main分支，跟踪远程分支main,再切换到main分支中</p>
+<p>他会检查远程有没有 <code>main</code> 分支有的话，创建一个本地 <code>main</code> 分支，跟踪远程分支 <code>main</code>,再切换到 <code>main</code> 分支中</p>
 <p>创建一个同名分支再进行操作，这样可以绕过不必要的麻烦。</p>
-<h4 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h4><p>不建议再主要工作的分支中，使用rebase命令，他会造成一些意外的更改记录</p>
+<h4 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h4><p>在合并不同分支的方式有两种 <code>git merge</code> 与 <code> git rebase</code></p>
+<p>使用 <code>git rebase</code> 命令你可以将某一分支上的所有修改，移至另外一个分支上， 简单理解就是改变当前分支的<code>base </code> </p>
+<p>可以将其想象成在一个分支上的提交拿起来，然后放到另一个分支的最新提交上。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git checkout future<br><br>git rebase main<br></code></pre></td></tr></table></figure>
+<p>执行<code>rebase</code>命令 首先会找到<code>future</code>与<code>main</code>分支的共同父提交，将从父提交到future分支的所有修改，存储为临时文件，</p>
+<p>以分支main为基准，将分支<code>future</code>上的提交一个一个地拿起来，并逐个应用到分支A的最新提交上，产生一次<code>future</code>新提交；</p>
+<p>最后回到目标分支 (main) 中进行合并</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">git checkout main<br><br>get merge future<br><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>TIP: 当我们执行 <code>rebase</code> 操作时，是在要移动的分支中执行 <code>rebase</code>，而不是在目标分支上执行。</p>
+</blockquote>
+<h3 id="rebase和merge的选择"><a href="#rebase和merge的选择" class="headerlink" title="rebase和merge的选择"></a>rebase和merge的选择</h3><p>使用rebase与merge会产生不同的Git历史记录，该如何进行选择呢？</p>
+<ul>
+<li><p>使用 <code>git merge</code> 在合并分支时，会产生一次新的提交历史</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/git/merge.png" alt="merge" data-caption="merge" loading="lazy"></p>
+</li>
+<li><p>使用 <code>git rebase</code> 直接将另外一个分支的修改复制了过来，并不会产生新的提交，这使历史记录更为简洁，并保持线性</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/git/rebase.png" alt="rebase" data-caption="rebase" loading="lazy"></p>
+</li>
+</ul>
+<p>你可以根据需要选择不同的合并方式</p>
+<blockquote>
+<p>不建议再主要工作的分支中，使用<code>rebase</code>命令，他会造成一些意外的更改记录</p>
+</blockquote>
 
     
 
@@ -460,7 +486,7 @@
                                 
                                   <!-- 上一篇文章 --> 
                                     <div class="old">
-                                        <a href="/2023/11/20/git/git-started/"> Git started</a>
+                                        <a href="/2023/11/21/git/git-started/"> Git started</a>
                                         <span class="next-page page-icon"></span>
                                     </div>
                                 
@@ -492,7 +518,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>mietl<br>
-        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/20/git/git-branch/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;20&#x2F;git&#x2F;git-branch&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;20&#x2F;git&#x2F;git-branch&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/21/git/git-branch/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;21&#x2F;git&#x2F;git-branch&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;21&#x2F;git&#x2F;git-branch&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -510,7 +536,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1700492471657"></script>
+    <script async src="/js/copy-codeblock.js?v=1700573142968"></script>
   
 
   
@@ -544,7 +570,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text">Git 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">分支的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.</span> <span class="toc-text">远程分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%86%E6%94%AF"><span class="toc-number">3.0.1.</span> <span class="toc-text">推送分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.0.2.</span> <span class="toc-text">跟踪远程分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#push-default"><span class="toc-number">3.0.3.</span> <span class="toc-text">push.default</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rebase"><span class="toc-number">3.0.4.</span> <span class="toc-text">rebase</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text">Git 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">分支的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.</span> <span class="toc-text">远程分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%86%E6%94%AF"><span class="toc-number">3.0.1.</span> <span class="toc-text">推送分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.0.2.</span> <span class="toc-text">跟踪远程分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#push-default"><span class="toc-number">3.0.3.</span> <span class="toc-text">push.default</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rebase"><span class="toc-number">3.0.4.</span> <span class="toc-text">rebase</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rebase%E5%92%8Cmerge%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">3.1.</span> <span class="toc-text">rebase和merge的选择</span></a></li></ol></li></ol>
                 </div>
             </button>
             
