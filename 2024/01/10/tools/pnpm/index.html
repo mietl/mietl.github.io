@@ -9,32 +9,32 @@
 <meta name="description" content="pnpm官网快速、节省磁盘空间的软件包管理器 pnpm是如何节省磁盘空间使用pnpm安装依赖后，依赖会被存储在硬盘的某一位置，当其他项目在安装依赖时，如果依赖版本存在，包里的文件将被硬链接到该项目、从而不会占用额外的磁盘空间，同时安装速度也得到了提升 硬链接(hard link)在操作系统的文件系统中，多个文件共同使用同一块存储单元      在使用硬链接的文件时，当修改了路径二中的文件内容时，路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pnpm包管理">
-<meta property="og:url" content="http://mietl.github.io/2024/01/10/build_tools/pnpm/index.html">
+<meta property="og:url" content="http://mietl.github.io/2024/01/10/tools/pnpm/index.html">
 <meta property="og:site_name" content="T:DM">
 <meta property="og:description" content="pnpm官网快速、节省磁盘空间的软件包管理器 pnpm是如何节省磁盘空间使用pnpm安装依赖后，依赖会被存储在硬盘的某一位置，当其他项目在安装依赖时，如果依赖版本存在，包里的文件将被硬链接到该项目、从而不会占用额外的磁盘空间，同时安装速度也得到了提升 硬链接(hard link)在操作系统的文件系统中，多个文件共同使用同一块存储单元      在使用硬链接的文件时，当修改了路径二中的文件内容时，路">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://mietl.github.io/images/build_tools/node_modules.png">
+<meta property="og:image" content="http://mietl.github.io/images/tools/pnpm/node_modules.png">
 <meta property="article:published_time" content="2024-01-10T15:25:27.000Z">
-<meta property="article:modified_time" content="2024-08-26T14:51:54.671Z">
+<meta property="article:modified_time" content="2024-08-27T07:00:39.860Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="pnpm">
 <meta property="article:tag" content="包管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mietl.github.io/images/build_tools/node_modules.png">
+<meta name="twitter:image" content="http://mietl.github.io/images/tools/pnpm/node_modules.png">
 
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1724683923682">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1724742057200">
 
-<link rel="stylesheet" href="/css/style.css?v=1724683923682">
+<link rel="stylesheet" href="/css/style.css?v=1724742057200">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1724683923682">
+        <link rel="stylesheet" href="/custom.css?v=1724742057200">
     
 
 
@@ -44,7 +44,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1724683923682"></script>
+<script async src="/js/app.js?v=1724742057200"></script>
 
  
 
@@ -222,7 +222,7 @@
           </li>
         
           <li>
-            <a href="/2024/07/08/dear_diary/2024-7-8/">2024.7.8</a>
+            <a href="/2024/07/08/dear_diary/2024-7-8/">2024.7.8 寻找</a>
           </li>
         
           <li>
@@ -320,7 +320,7 @@
   <article>
     
         <div class="nexmoe-post-cover absolute" style="padding-top: 32.44325767690254%;"> 
-            <img src="/images/build_tools/pnpm-light.svg" alt="pnpm包管理" loading="lazy">
+            <img src="/images/tools/pnpm/pnpm-light.svg" alt="pnpm包管理" loading="lazy">
             <h1>pnpm包管理</h1>
         </div>
     
@@ -358,7 +358,7 @@
 <blockquote>
 <p>删除源文件后，这个链接就失效了，无法找到引用文件</p>
 </blockquote>
-<h2 id="提高安装速度"><a href="#提高安装速度" class="headerlink" title="提高安装速度"></a>提高安装速度</h2><h3 id="非扁平的-node-modules-目录"><a href="#非扁平的-node-modules-目录" class="headerlink" title="非扁平的 node_modules 目录"></a>非扁平的 node_modules 目录</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/build_tools/node_modules.png" alt="node_modules" data-caption="node_modules" loading="lazy"><br>解决幽灵依赖问题</p>
+<h2 id="提高安装速度"><a href="#提高安装速度" class="headerlink" title="提高安装速度"></a>提高安装速度</h2><h3 id="非扁平的-node-modules-目录"><a href="#非扁平的-node-modules-目录" class="headerlink" title="非扁平的 node_modules 目录"></a>非扁平的 node_modules 目录</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/tools/pnpm/node_modules.png" alt="node_modules" data-caption="node_modules" loading="lazy"><br>解决幽灵依赖问题</p>
 <p>通过npm 或 yarn 安装依赖时，所有包都会存放在node_modules下<br>这就导致 Node.js 模块查找策略，你的代码中可以直接访问能找到这些不属于当前项目package.json的依赖包</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a target="_blank" rel="noopener" href="https://pnpm.io/installation">installation</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># npm 全局安装</span><br>npm install -g pnpm<br><br><span class="hljs-comment"># mac brew</span><br>brew install pnpm<br></code></pre></td></tr></table></figure>
@@ -416,6 +416,12 @@
         
              <!-- 先找到与当前文字相同的目录 -->
             
+                
+            
+          
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
                  <!-- 先找到与当前文字相同的目录 -->
                     
                     
@@ -469,12 +475,6 @@
             
           
         
-             <!-- 先找到与当前文字相同的目录 -->
-            
-                
-            
-          
-        
     </nav>
   </article>
 
@@ -482,7 +482,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>mietl<br>
-        <strong>本文链接：</strong><a href="http://mietl.github.io/2024/01/10/build_tools/pnpm/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;build_tools&#x2F;pnpm&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;build_tools&#x2F;pnpm&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2024/01/10/tools/pnpm/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;tools&#x2F;pnpm&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;tools&#x2F;pnpm&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -500,7 +500,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1724683923583"></script>
+    <script async src="/js/copy-codeblock.js?v=1724742057083"></script>
   
 
   
