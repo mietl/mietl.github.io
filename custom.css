@@ -4,6 +4,13 @@
 }
 
 
+.nexmoe-post-cover img[src*="images/dear_diary"]{
+  filter: blur(12px);
+}
+
+.nexmoe-post:has(.hbe-button) .nexmoe-post-cover img{
+  filter: unset !important;
+}
 
 body {
   background: #f9f9f9;
