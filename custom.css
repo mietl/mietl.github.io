@@ -62,7 +62,9 @@ code {
 }
 
 article code {
-  background: #eff2ff;
+  /* background: #eff2ff; */
+  /* background: rgba(223, 234, 155,.4); */
+  background: #F3EBE1;
 }
 
 article ul li {
