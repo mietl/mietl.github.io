@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://mietl.github.io/images/git/merge.png">
 <meta property="og:image" content="http://mietl.github.io/images/git/rebase.png">
 <meta property="article:published_time" content="2023-11-13T22:15:08.000Z">
-<meta property="article:modified_time" content="2024-09-22T01:25:06.617Z">
+<meta property="article:modified_time" content="2024-09-22T12:33:45.766Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -29,15 +29,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1726968319647">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727008434571">
 
-<link rel="stylesheet" href="/css/style.css?v=1726968319647">
+<link rel="stylesheet" href="/css/style.css?v=1727008434571">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1726968319647">
+        <link rel="stylesheet" href="/custom.css?v=1727008434571">
     
 
 
@@ -47,7 +47,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1726968319647"></script>
+<script async src="/js/app.js?v=1727008434571"></script>
 
  
 
@@ -197,6 +197,19 @@
 		>
 			<i
 				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/mietl"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
 			></i> </a
 		><a
 			class="mdui-ripple"
@@ -384,10 +397,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/main<br></code></pre></td></tr></table></figure>
 
 <p>错误 <strong><u>fatal: the requested upstream branch ‘origin&#x2F;main’ does not exist</u></strong></p>
-<p><img src="/images/git/fatal.png"></p>
+<p><img src="http://mietl.github.io/images/git/fatal.png"></p>
 <p>这是因为目前只是与远程仓库建立了的连接，远程仓库中有哪些分支还不知道</p>
 <p>通过<code>git fetch</code>命令来获取最新的远程分支，</p>
-<p><img src="/images/git/fetch-branch.png"></p>
+<p><img src="http://mietl.github.io/images/git/fetch-branch.png"></p>
 <p>这样本地就有 <code>origin/main</code> 的分支了</p>
 <h4 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h4><p>在创建某个分支后，需要共享他时，通过 <code>git push &lt;remote&gt; &lt;branch&gt;</code>推送到远程</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git push origin dev<br></code></pre></td></tr></table></figure>
@@ -413,7 +426,7 @@
 <p>git pull 时拉取代码时，指定上游分支后，提后后</p>
 <p>推送到远程仓库时,产生如下错误,</p>
 <p>本地分支: master<br>远程分支: main</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/git/push-default.png" alt="path-default" data-caption="path-default" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/git/push-default.png" alt="path-default" data-caption="path-default" loading="lazy"></p>
 <p>这个时候就会有疑问了，明明已经设置了上游分支，为什么还需要指定</p>
 <p>这是由于 git push 推送时的默认行为 , 当 <code>push</code> 时会在远程寻找与本地分支同名的进行推送，没有找到就拒绝推送</p>
 <p>常见的默认行为有一下几种，你可以通过配置来修改他</p>
@@ -449,56 +462,15 @@
 </blockquote>
 <h3 id="rebase-和-merge-的选择"><a href="#rebase-和-merge-的选择" class="headerlink" title="rebase 和 merge 的选择"></a>rebase 和 merge 的选择</h3><p>使用 rebase 与 merge 会产生不同的 Git 历史记录，该如何进行选择呢？</p>
 <ul>
-<li>使用 <code>git merge</code> 在合并分支时，会产生一次新的提交历史<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/git/merge.png" alt="merge" data-caption="merge" loading="lazy"></li>
-<li>使用 <code>git rebase</code> 直接将另外一个分支的修改复制了过来，并不会产生新的提交，这使历史记录更为简洁，并保持线性<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/images/git/rebase.png" alt="rebase" data-caption="rebase" loading="lazy"></li>
+<li>使用 <code>git merge</code> 在合并分支时，会产生一次新的提交历史<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/git/merge.png" alt="merge" data-caption="merge" loading="lazy"></li>
+<li>使用 <code>git rebase</code> 直接将另外一个分支的修改复制了过来，并不会产生新的提交，这使历史记录更为简洁，并保持线性<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/git/rebase.png" alt="rebase" data-caption="rebase" loading="lazy"></li>
 </ul>
 <p>你可以根据需要选择不同的合并方式</p>
 <blockquote>
 <p>不建议再主要工作的分支中，使用<code>rebase</code>命令，他会造成一些意外的更改记录</p>
 </blockquote>
 
-    <section id="skmg_top_middle_instagram" style="display:none">
-   <div id="skmg_top_middle_instagram_card_cover">
-     <div
-       id="skmg_top_middle_instagram_card"
-       class="___instagram_card_type4 card_init card_after"
-       style="margin-top: -77px"
-     >
-       <div id="skmg_top_middle_instagram_card_body">
-         <div
-           id="instagram_card_type02"
-           class="instagram_card_item"
-           style="display: block"
-         ></div>
-         <div
-           id="instagram_card_type03"
-           class="instagram_card_item"
-           style="display: none"
-         ></div>
-         <div
-           id="instagram_card_type04"
-           class="instagram_card_item"
-           style="display: none"
-         ></div>
-       </div>
-     </div>
-   </div>
-
-   <a
-     href="https://www.instagram.com/sukimega_komura/"
-     target="_blank"
-     id="skmg_top_middle_instagram_in"
-   >
-     <h3>
-       <img
-         src="https://anime.shochiku.co.jp/sukimega/wp-content/themes/sukimega_first_theme/common2/images/top_content_instagram_head.svg"
-         alt="Instagram"
-       />
-     </h3>
-     <span class="instagram_more">MORE</span>
-   </a>
- </section>
-
+    
 
     <nav class="post-nav prev-next">
         
@@ -588,7 +560,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1726968319420"></script>
+    <script async src="/js/copy-codeblock.js?v=1727008434454"></script>
   
 
   
