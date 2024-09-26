@@ -1,37 +1,40 @@
 <!doctype html>
 <html lang="zh"><head>
-<title>随想 - T:DM</title>
+<title>pnpm包管理 - T:DM</title>
 <meta charset="UTF-8">
 <meta name="keywords" content="日记、随笔、记录、Dream">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="最近发生的事一最近发生的事二">
+<meta name="description" content="pnpm官网快速、节省磁盘空间的软件包管理器 pnpm是如何节省磁盘空间使用pnpm安装依赖后，依赖会被存储在硬盘的某一位置，当其他项目在安装依赖时，如果依赖版本存在，包里的文件将被硬链接到该项目、从而不会占用额外的磁盘空间，同时安装速度也得到了提升 硬链接(hard link)在操作系统的文件系统中，多个文件共同使用同一块存储单元      在使用硬链接的文件时，当修改了路径二中的文件内容时，路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随想">
-<meta property="og:url" content="http://mietl.github.io/2023/09/15/sui-xiang/index.html">
+<meta property="og:title" content="pnpm包管理">
+<meta property="og:url" content="http://mietl.github.io/2024/01/10/tools/pnpm/index.html">
 <meta property="og:site_name" content="T:DM">
-<meta property="og:description" content="最近发生的事一最近发生的事二">
+<meta property="og:description" content="pnpm官网快速、节省磁盘空间的软件包管理器 pnpm是如何节省磁盘空间使用pnpm安装依赖后，依赖会被存储在硬盘的某一位置，当其他项目在安装依赖时，如果依赖版本存在，包里的文件将被硬链接到该项目、从而不会占用额外的磁盘空间，同时安装速度也得到了提升 硬链接(hard link)在操作系统的文件系统中，多个文件共同使用同一块存储单元      在使用硬链接的文件时，当修改了路径二中的文件内容时，路">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-15T11:30:02.000Z">
+<meta property="og:image" content="http://mietl.github.io/images/tools/pnpm/node_modules.png">
+<meta property="article:published_time" content="2024-01-10T15:25:27.000Z">
 <meta property="article:modified_time" content="2024-09-26T17:05:37.294Z">
 <meta property="article:author" content="mietl">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="pnpm">
+<meta property="article:tag" content="包管理">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mietl.github.io/images/tools/pnpm/node_modules.png">
 
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727370346907">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727370346893">
 
-<link rel="stylesheet" href="/css/style.css?v=1727370346907">
+<link rel="stylesheet" href="/css/style.css?v=1727370346893">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1727370346907">
+        <link rel="stylesheet" href="/custom.css?v=1727370346893">
     
 
 
@@ -41,7 +44,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1727370346907"></script>
+<script async src="/js/app.js?v=1727370346893"></script>
 
  
 
@@ -325,15 +328,17 @@
 </div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
   <article>
     
-        <div class="nexmoe-post-cover"> 
-            <img src="/images/cover/cover.jpg" alt="随想" loading="lazy">
-            <h1>随想</h1>
+        <div class="nexmoe-post-cover absolute" style="padding-top: 32.44325767690254%;"> 
+            <img src="http://mietl.github.io/images/tools/pnpm/pnpm-light.svg" alt="pnpm包管理" loading="lazy">
+            <h1>pnpm包管理</h1>
         </div>
     
     
     <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2023年09月15日</a>
+        <a class="nexmoefont icon-calendar-fill">2024年01月10日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/Tools/">Tools</a>
         
         
     </div>
@@ -344,12 +349,91 @@
     
 </div>
 
-    <h4 id="最近发生的事一"><a href="#最近发生的事一" class="headerlink" title="最近发生的事一"></a>最近发生的事一</h4><h4 id="最近发生的事二"><a href="#最近发生的事二" class="headerlink" title="最近发生的事二"></a>最近发生的事二</h4>
+    <p><a target="_blank" rel="noopener" href="https://pnpm.io/">pnpm官网</a><br>快速、节省磁盘空间的软件包管理器</p>
+<h2 id="pnpm是如何节省磁盘空间"><a href="#pnpm是如何节省磁盘空间" class="headerlink" title="pnpm是如何节省磁盘空间"></a>pnpm是如何节省磁盘空间</h2><p>使用pnpm安装依赖后，依赖会被存储在硬盘的某一位置，<br>当其他项目在安装依赖时，如果依赖版本存在，包里的文件将被硬链接到该项目、从而不会占用额外的磁盘空间，同时安装速度也得到了提升</p>
+<h4 id="硬链接-hard-link"><a href="#硬链接-hard-link" class="headerlink" title="硬链接(hard link)"></a>硬链接(hard link)</h4><p>在操作系统的文件系统中，多个文件共同使用同一块存储单元   </p>
+<!-- 路径一 project1
+路径二 project2/node_modules -->
+
+<p>在使用硬链接的文件时，当修改了路径二中的文件内容时，路径一的文件也随之改变、它们使用的是磁盘中同一块数据  </p>
+<h4 id="软链接-soft-link"><a href="#软链接-soft-link" class="headerlink" title="软链接(soft link)"></a>软链接(soft link)</h4><p>通过符号链接到文件存储位置，指向其他文件的引用，例如快捷方式   </p>
+<h4 id="如何创建硬链接"><a href="#如何创建硬链接" class="headerlink" title="如何创建硬链接"></a>如何创建硬链接</h4><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># macos </span><br><span class="hljs-built_in">ln</span> test.js test_hard.js<br><br><span class="hljs-comment"># windows </span><br>mklink /H test.js test_hard.js<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这与拷贝文件不同的是，拷贝文件会占用一定的存储空间，它们在磁盘上分别占据不同的空间</p>
+</blockquote>
+<h4 id="如何创建软链接"><a href="#如何创建软链接" class="headerlink" title="如何创建软链接"></a>如何创建软链接</h4><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># macos </span><br><span class="hljs-built_in">ln</span> -s test.js test_soft.js<br><br><span class="hljs-comment"># windows </span><br>mklink  test.js test_soft.js<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>删除源文件后，这个链接就失效了，无法找到引用文件</p>
+</blockquote>
+<h2 id="提高安装速度"><a href="#提高安装速度" class="headerlink" title="提高安装速度"></a>提高安装速度</h2><h3 id="非扁平的-node-modules-目录"><a href="#非扁平的-node-modules-目录" class="headerlink" title="非扁平的 node_modules 目录"></a>非扁平的 node_modules 目录</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/tools/pnpm/node_modules.png" alt="node_modules" data-caption="node_modules" loading="lazy"><br>解决幽灵依赖问题</p>
+<p>通过npm 或 yarn 安装依赖时，所有包都会存放在node_modules下<br>这就导致 Node.js 模块查找策略，你的代码中可以直接访问能找到这些不属于当前项目package.json的依赖包</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a target="_blank" rel="noopener" href="https://pnpm.io/installation">installation</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># npm 全局安装</span><br>npm install -g pnpm<br><br><span class="hljs-comment"># mac brew</span><br>brew install pnpm<br></code></pre></td></tr></table></figure>
+
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装package.json中的依赖</span><br>pnpm install<br><br><span class="hljs-comment"># 添加依赖包</span><br>pnpm add<br><br><span class="hljs-comment"># 删除依赖包</span><br>pnpm remove <br><br><span class="hljs-comment"># 执行命令</span><br>pnpm xxx<br><br><span class="hljs-comment"># 查看包仓库存储位置</span><br>pnpm store path<br><span class="hljs-comment"># &gt; /Users/mietl/Library/pnpm/store/v3</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当pnpm store文件夹越来越大时，可以通过 <code> pnpm store prune</code> 来删除一些未被引用的包，释放空间</p>
+</blockquote>
+
     
 
     <nav class="post-nav prev-next">
         
              <!-- 先找到与当前文字相同的目录 -->
+            
+                 <!-- 先找到与当前文字相同的目录 -->
+                    
+                    
+                         
+                         <!-- 在找到当前文章所在的 index -->
+                            
+                            
+                                 
+                                
+                                
+
+                           
+                                
+                                
+                                
+                            
+                                 
+                                
+                                  <!-- 上一篇文章 --> 
+                                    <div class="old pager">
+                                        <a  class="pager-link prev" href="/2023/11/21/git/git-started/">
+                                            <span class="desc"></span>
+                                            <span class="title" >#Git started</span>
+                                        </a>
+                                    </div>
+                                
+
+                           
+                                
+                                
+                                
+                            
+                                 
+                                
+                                
+
+                           
+                                
+                                
+                                
+                            
+                        
+                    
+                         
+                        
+                    
+                         
+                        
+                    
+                
             
           
         
@@ -360,7 +444,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>mietl<br>
-        <strong>本文链接：</strong><a href="http://mietl.github.io/2023/09/15/sui-xiang/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;09&#x2F;15&#x2F;sui-xiang&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;09&#x2F;15&#x2F;sui-xiang&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2024/01/10/tools/pnpm/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;tools&#x2F;pnpm&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;01&#x2F;10&#x2F;tools&#x2F;pnpm&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -373,12 +457,12 @@
   <div class="nexmoe-post-meta nexmoe-rainbow">
    
     
-        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a>
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/pnpm/" rel="tag">pnpm</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86/" rel="tag">包管理</a>
     
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1727370346850"></script>
+    <script async src="/js/copy-codeblock.js?v=1727370346849"></script>
   
 
   
@@ -412,7 +496,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E8%BF%91%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">最近发生的事一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E8%BF%91%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E4%BA%8C"><span class="toc-number">2.</span> <span class="toc-text">最近发生的事二</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pnpm%E6%98%AF%E5%A6%82%E4%BD%95%E8%8A%82%E7%9C%81%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4"><span class="toc-number">1.</span> <span class="toc-text">pnpm是如何节省磁盘空间</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E9%93%BE%E6%8E%A5-hard-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">硬链接(hard link)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E9%93%BE%E6%8E%A5-soft-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">软链接(soft link)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E7%A1%AC%E9%93%BE%E6%8E%A5"><span class="toc-number">1.0.3.</span> <span class="toc-text">如何创建硬链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="toc-number">1.0.4.</span> <span class="toc-text">如何创建软链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E9%AB%98%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6"><span class="toc-number">2.</span> <span class="toc-text">提高安装速度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E6%89%81%E5%B9%B3%E7%9A%84-node-modules-%E7%9B%AE%E5%BD%95"><span class="toc-number">2.1.</span> <span class="toc-text">非扁平的 node_modules 目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">常用命令</span></a></li></ol>
                 </div>
             </button>
             

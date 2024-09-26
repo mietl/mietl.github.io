@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>MacOS使用记录📔 - T:DM</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="日记、随笔、记录、Dream">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="设置允许安装任意来源的 App小于 MacOS 15  终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8  卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS使用记录📔">
+<meta property="og:url" content="http://mietl.github.io/2024/08/26/macos/macos-wiki/index.html">
+<meta property="og:site_name" content="T:DM">
+<meta property="og:description" content="设置允许安装任意来源的 App小于 MacOS 15  终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8  卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://mietl.github.io/images/mac/dockPeek1920.png">
+<meta property="og:image" content="http://mietl.github.io/macos/top_icon.png">
+<meta property="og:image" content="http://mietl.github.io/files/developer.png">
+<meta property="og:image" content="http://mietl.github.io/files/menubar.png">
+<meta property="article:published_time" content="2024-08-26T11:30:02.000Z">
+<meta property="article:modified_time" content="2024-09-26T17:05:37.294Z">
+<meta property="article:author" content="mietl">
+<meta property="article:tag" content="MacOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mietl.github.io/images/mac/dockPeek1920.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727370346885">
+
+<link rel="stylesheet" href="/css/style.css?v=1727370346885">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1727370346885">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1727370346885"></script>
+
+ 
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/cover.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+  <div class="nexmoe-avatar mdui-ripple">
+    <a href="/" title="mietl">
+      <img
+        src="/images/avatar.jpg"
+        alt="mietl"
+        alt="mietl"
+      />
+    </a>
+  </div>
+  <div class="nexmoe-count">
+    <div><span>文章</span>5</div>
+    <div><span>标签</span>5</div>
+    <div>
+      <span>分类</span>1
+    </div>
+  </div>
+  <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/"
+      title="回到首页"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-home"
+      ></i>
+      <div class="mdui-list-item-content">回到首页</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/archive.html"
+      title="文章归档"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-container"
+      ></i>
+      <div class="mdui-list-item-content">文章归档</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/PY.html"
+      title="我的朋友"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-unorderedlist"
+      ></i>
+      <div class="mdui-list-item-content">我的朋友</div>
+    </a>
+    
+    <a
+      class="nexmoe-list-item mdui-list-item mdui-ripple false"
+      href="/about.html"
+      title="关于博主"
+    >
+      <i
+        class="mdui-list-item-icon nexmoefont icon-info-circle"
+      ></i>
+      <div class="mdui-list-item-content">关于博主</div>
+    </a>
+    
+  </div>
+
+    <div class="nexmoe-widget-wrap">
+  <div class="nexmoe-widget nexmoe-search">
+    <form id="search_form" action_e="https://www.google.com/search?q=site:mietl.github.io"  onsubmit="return search();">
+      <label><input id="search_value" name="q" overed="完结" words="【倒数日】还有" target="Sat Jan 04 2025 00:00:00 GMT+0000 (Coordinated Universal Time)" type="search"
+          class="hitokoto-text" placeholder=""></label>
+    </form>
+  </div>
+</div>
+
+<script>
+  // https://juejin.cn/post/7223653286465060919
+  let hitokotoText = document.getElementById('search_value')
+  let words = hitokotoText.getAttribute('words');
+  let overed =  hitokotoText.getAttribute('overed');
+  let targetDay = hitokotoText.getAttribute('target');
+
+  function diffDay(startDate, endDate) {
+    // 将日期字符串转换为日期对象
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    // 计算日期的毫秒数差值
+    const timeDiff = end.getTime() - start.getTime();
+
+    // 计算天数差
+    const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    return diffDays;
+  }
+
+
+  hitokotoText.addEventListener('input', function () {
+    localStorage.setItem('placeValue', this.value)
+  })
+
+  window.addEventListener('load', function () {
+    let value = localStorage.getItem("placeValue")
+    if (value) {
+      hitokotoText.value = value;
+    }
+
+    let targetDate = new Date(targetDay);
+    // 农历日期获取公历
+    const solarDate = calendar.lunar2solar(targetDate.getFullYear(), targetDate.getMonth() + 1, targetDate.getDate(), false);
+
+    let duration = diffDay(new Date(), solarDate.date);
+    
+    if(duration < 0){
+      hitokotoText.placeholder = overed
+    }else{
+      hitokotoText.placeholder = words + '' + duration + '天'
+    }
+  })
+</script>    <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://github.com/mietl/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/null"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/mietl"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/26/macos/macos-wiki/">MacOS使用记录📔</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/10/tools/pnpm/">pnpm包管理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/21/git/git-started/">Git started</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/13/git/git-branch/">Git branch</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/15/sui-xiang/">随想</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+   
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Tools/">Tools</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+   
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/pnpm/" style="font-size: 10px;">pnpm</a> <a href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86/" style="font-size: 10px;">包管理</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">记录</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(5);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2024/">2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archive/2023/">2023</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+
+  <div class="nexmoe-copyright">
+    &copy; 2024 
+    <a href="https://github.com/mietl" target="_blank"
+      >mietl</a
+    >
+    Powered by
+    <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank"
+      >Nexmoe</a
+    >
+    
+  </div>
+</div>
+<!-- .nexmoe-drawer -->
+</div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 32.44325767690254%;"> 
+            <img src="http://mietl.github.io/images/cover/macbook.png" alt="MacOS使用记录📔" loading="lazy">
+            <h1>MacOS使用记录📔</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2024年08月26日</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="允许安装任意来源的-App"><a href="#允许安装任意来源的-App" class="headerlink" title="允许安装任意来源的 App"></a>允许安装任意来源的 App</h3><p><strong>小于 MacOS 15</strong>  终端执行以下命令   </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">sudo spctl --master-disable<br></code></pre></td></tr></table></figure>
+<p><strong>MacOS 15 开启任何来源</strong></p>
+<ol>
+<li>下载描述文件  <a href="http://mietl.github.io/files/anysource.mobileconfig">AnySource.mobileconfig</a>    </li>
+<li>双击安装描述文件</li>
+</ol>
+<h2 id="我的-App"><a href="#我的-App" class="headerlink" title="我的 App"></a>我的 App</h2><ul>
+<li>App Cleaner 8  卸载软件   </li>
+<li>Beyond Compare 好用的文件对比工具   </li>
+<li>Bob 翻译工具   </li>
+<li><a target="_blank" rel="noopener" href="https://openai.com/chatgpt/">ChatGPT</a></li>
+</ul>
+<h3 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h3><ul>
+<li>Skim 简单的PDF阅读 </li>
+<li><a target="_blank" rel="noopener" href="https://arc.net/">Arc</a> 好看实用浏览器<br><code>brew install --cask arc</code></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Ranchero-Software/NetNewsWire">NetNewsWire</a>  开源免费的 RSS 阅读器<br><code>brew install --cask netnewswire</code></li>
+<li><a target="_blank" rel="noopener" href="https://follow.is/">Follow</a> 下一代信息浏览器。 更喜欢 follow</li>
+</ul>
+<h3 id="开发🔨"><a href="#开发🔨" class="headerlink" title="开发🔨"></a>开发🔨</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/toolbox-app/">JetBrains Toolbox</a>  管理JetBrains系列软件，更新   </li>
+<li><a target="_blank" rel="noopener" href="https://orbstack.dev/">OrbStack</a><br>  <code>brew install orbstack</code></li>
+<li><a target="_blank" rel="noopener" href="https://www.warp.dev/">Warp</a><br>  <code>brew install --cask warp</code></li>
+<li><a target="_blank" rel="noopener" href="https://zed.dev/">Zed</a>    </li>
+<li><a target="_blank" rel="noopener" href="https://www.cursor.com/">Cursor</a>    </li>
+<li>Google Chrome<br>浏览器插件<br><a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/cfpdbfmncaampihkmejogihjkenkonbn?hl=zh-CN">codebox</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Visual Studio Code</a><br>  1.主题推荐 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=iwyvi.chinolor">Chinolor Theme</a><br>  2.字体推荐 FiraCode<br>  3.查看当前安装扩展 <code>bash code --list-extensions</code></li>
+<li>Android Studio 开发移动端App<br>  主题推荐  Mariana Pro Theme 和 我喜欢的配色方案<a href="http://mietl.github.io/files/chinolor.icls">Chinolor.icls</a>    </li>
+<li>Fleet</li>
+<li><a target="_blank" rel="noopener" href="https://gitbutler.com/">GitButler</a>   </li>
+<li><a target="_blank" rel="noopener" href="http://www.usebruno.com/">Bruno</a>  - 开源 IDE，测试 API工具。</li>
+</ul>
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://anytype.io/">Anytype</a>  自由的笔记软件   </li>
+<li>Typora<br>主题推荐 <a target="_blank" rel="noopener" href="https://github.com/theme-nexmoe/typora-theme-nexmoe?tab=readme-ov-file">typora-theme-nexmoe</a></li>
+</ul>
+<h3 id="音乐🎵"><a href="#音乐🎵" class="headerlink" title="音乐🎵"></a>音乐🎵</h3><ul>
+<li>NeteaseMusic   </li>
+<li><a target="_blank" rel="noopener" href="https://open.spotify.com/">Spotify</a>&#x2F;<a href="spotube.krtirtho.dev">Spotube</a></li>
+</ul>
+<h3 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://wouter01.github.io/MediaMate/">MediaMate</a>  不一样的 音量、亮度和正在播放的效果，很好看🤩，不过要付费   </li>
+<li><a target="_blank" rel="noopener" href="https://d.keka.io/">Keka</a> 开源，可爱的压缩软件<br>  <code>brew install --cask keka </code></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/MrKai77/Loop">Loop</a> 最好用的窗口管理工具，丝滑   </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Caldis/Mos">Mos</a>  开源 让鼠标平滑，反向滚动   </li>
+<li>Proxifier  全局代理<br> 激活码<br> V2<br> P427L-9Y552-5433E-8DSR3-58Z68<br> V3<br> 3CWNN-WYTP4-SD83W-ASDFR-84KEA</li>
+<li>SoundSource 声音控制软件，可以控制单个应用声音大小<br>  激活码<br>  Your Name:  <code>Pertim Macwk</code><br>  Your Code:  <code>ZLAT-QXP9-K3DW-K2UH-2WX9-96NH-3KPJ-NDY6-DC9D</code>  </li>
+<li><a target="_blank" rel="noopener" href="https://z.weixin.qq.com/">微信输入法</a> 简洁的输入法， 支持跨设备(手机&#x2F;电脑)复制粘贴</li>
+<li>iPreview - 强大的快捷预览扩展程序(付费)   </li>
+<li>Caffeinated  防休眠应用 </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ejbills/DockDoor">DockDoor</a> 类似windows预览窗口<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/mac/dockPeek1920.png" alt="dockPeek" data-caption="dockPeek" loading="lazy"></li>
+</ul>
+<h3 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h3><ul>
+<li>Shadowrocket 翻墙   </li>
+<li>Diffusers   </li>
+<li>DockX</li>
+<li>Dropover</li>
+<li><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/flow-focus-pomodoro-timer/id1423210932">Flow</a> - 番茄工作法 &amp; 专注计时器   </li>
+<li><a target="_blank" rel="noopener" href="https://inputsource.pro/zh-CN">Input Source Pro</a>  自动切换输入法，根据不同应用、不同网站，自动切换<br>  <code>brew install --cask input-source-pro</code></li>
+<li><a target="_blank" rel="noopener" href="https://www.mowglii.com/itsycal/">Itsycal</a>  小巧的菜单栏日历  <code>&#39;TT&#39;MMd-e</code></li>
+<li><a target="_blank" rel="noopener" href="https://max.codes/latest">Latest</a>  检查软件哪些软件更新   </li>
+<li>MagicNotch 菜单栏刘海，快捷按钮操作  </li>
+<li><a target="_blank" rel="noopener" href="https://marta.sh/">Marta</a>  - 双窗格文件管理<br>  <code>brew install --cask marta</code></li>
+<li>Windows App 远程 windows电脑   </li>
+<li>Mochi Diffusion   </li>
+<li><a target="_blank" rel="noopener" href="https://www.ollama.com/">Ollama</a>  - 本地大模型   </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/kevinhermawan/Ollamac">Ollamac</a>  原生开发的Ollama应用聊天界面   </li>
+<li>One Switch   </li>
+<li>Parallels Desktop  Mac最好的虚拟机软件   </li>
+<li>PasteNow  好用的剪贴板工具   </li>
+<li>PictureView 免费的图片浏览工具</li>
+<li>QuickRecorder  开源的录屏软件<br>  <code>brew install lihaoyun6/tap/quickrecorder </code></li>
+<li><a target="_blank" rel="noopener" href="https://www.raycast.com/">Raycast</a><br>  <code>brew install --cask raycast </code></li>
+<li>Riffo 通过 AI 重命名文件名   </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Tencent/lemon-cleaner">Tencent Lemon</a>  腾讯开源的Mac清理工具   </li>
+<li>Things3  好看的任务清单ToDo软件   </li>
+<li>ToDesk 远程控制工具   </li>
+<li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/xnip-%E6%88%AA%E5%9B%BE-%E6%A0%87%E6%B3%A8/id1221250572?mt=12">Xnip</a> 免费的截图软件，支持长截图，好看   </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mulaRahul/keyviz">keyviz </a> 在屏幕上显示，你正在按下的键   </li>
+<li><a target="_blank" rel="noopener" href="https://iina.io/">IINA</a> 开源好用的视频播放器<br>  <code>brew install --cask iina </code></li>
+</ul>
+<h3 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/%E5%8D%B3%E5%88%BBapp/id966129812">即刻(ios)</a> 上班摸鱼   </li>
+<li><a target="_blank" rel="noopener" href="https://mac.weixin.qq.com/">WeChat</a>  聊天   </li>
+<li>Mimestream  好用的Gmail邮箱</li>
+<li>Discord<br>  <code>brew install --cask discord </code></li>
+<li>TencentMeeting - 腾讯会议 开会讨论</li>
+</ul>
+<h3 id="编程字体"><a href="#编程字体" class="headerlink" title="编程字体"></a>编程字体</h3><p><a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode">FiraCode</a></p>
+<h2 id="破解站"><a href="#破解站" class="headerlink" title="破解站"></a>破解站</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://appstorrent.ru/">appstorrent</a>    </li>
+<li><a target="_blank" rel="noopener" href="https://xmac.app/app/">xmac</a></li>
+</ul>
+<h3 id="Mac书签"><a href="#Mac书签" class="headerlink" title="Mac书签"></a>Mac书签</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023年🧑‍💻工程师的 Mac 工具箱2023年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>    </li>
+<li><a target="_blank" rel="noopener" href="https://44maker.github.io/wiki/Mac/index.html">终极配置教程</a></li>
+</ul>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/corpnewt/gibMacOS">GitHub - corpnewt&#x2F;gibMacOS: Py2&#x2F;py3 script that can download macOS components direct from Apple</a>    </li>
+<li><a target="_blank" rel="noopener" href="https://qiuchenlyopensource.github.io/Documentaions/starter-topic.html">Mac软件注入 | InjectLib</a></li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
+<li>command + option +  x 剪贴文件</li>
+</ol>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ol>
+<li><p>访达 command 键 + 拖动软件 可以将软件图标添加到访达顶部，快捷使用<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/macos/top_icon.png" alt="image.png" data-caption="image.png" loading="lazy">    </p>
+</li>
+<li><p>option 键  + 拖动访达窗口大小，可以记录窗口大小，下次打开&#x2F;新建窗口时，还是之前拖动的大小   </p>
+</li>
+<li><p>在 ~&#x2F;Users&#x2F; 用户名下 创建 Developer 目录,系统会自动添加锤子图标，你可以将他添加到边栏<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/files/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </p>
+</li>
+<li><p>之前菜单栏日期莫名其妙变成灰色， 长按option 点击日期，可以点亮<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/files/menubar.png" alt="menubar.png" data-caption="menubar.png" loading="lazy"> </p>
+</li>
+<li><p>终端代理 </p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 1082 为代理端口号，替换成你代理软件的端口 </span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">https_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">http_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">all_proxy</span>=socks5://127.0.0.1:1082<br></code></pre></td></tr></table></figure></li>
+</ol>
+
+    
+
+    <nav class="post-nav prev-next">
+        
+             <!-- 先找到与当前文字相同的目录 -->
+            
+          
+        
+    </nav>
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>mietl<br>
+        <strong>本文链接：</strong><a href="http://mietl.github.io/2024/08/26/macos/macos-wiki/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;08&#x2F;26&#x2F;macos&#x2F;macos-wiki&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2024&#x2F;08&#x2F;26&#x2F;macos&#x2F;macos-wiki&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/MacOS/" rel="tag">MacOS</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1727370346848"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <script src="https://giscus.app/client.js"
+    data-repo="mietl/mietl.github.io"
+    data-repo-id="R_kgDOJgD8TA"
+    data-category="General"
+    data-category-id="DIC_kwDOJgD8TM4CZVbm"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    lazy-load=false
+    crossorigin="anonymous"
+    async>
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%81%E8%AE%B8%E5%AE%89%E8%A3%85%E4%BB%BB%E6%84%8F%E6%9D%A5%E6%BA%90%E7%9A%84-App"><span class="toc-number">1.1.</span> <span class="toc-text">允许安装任意来源的 App</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-App"><span class="toc-number">2.</span> <span class="toc-text">我的 App</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%85%E8%AF%BB"><span class="toc-number">2.1.</span> <span class="toc-text">阅读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%F0%9F%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">开发🔨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">2.3.</span> <span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%F0%9F%8E%B5"><span class="toc-number">2.4.</span> <span class="toc-text">音乐🎵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7"><span class="toc-number">2.5.</span> <span class="toc-text">系统工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.6.</span> <span class="toc-text">实用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BA%A4"><span class="toc-number">2.7.</span> <span class="toc-text">社交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%AD%97%E4%BD%93"><span class="toc-number">2.8.</span> <span class="toc-text">编程字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E8%A7%A3%E7%AB%99"><span class="toc-number">3.</span> <span class="toc-text">破解站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac%E4%B9%A6%E7%AD%BE"><span class="toc-number">3.1.</span> <span class="toc-text">Mac书签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">3.2.</span> <span class="toc-text">工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">4.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">小技巧</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
