@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="设置允许安装任意来源的 App小于 MacOS 15  终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8  卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具">
+<meta name="description" content="设置允许安装任意来源的 AppMacOS 15之前版本终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8 卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具    Ch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MacOS使用记录📔">
 <meta property="og:url" content="http://mietl.github.io/2024/08/26/macos/macos-wiki/index.html">
 <meta property="og:site_name" content="T:DM">
-<meta property="og:description" content="设置允许安装任意来源的 App小于 MacOS 15  终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8  卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具">
+<meta property="og:description" content="设置允许安装任意来源的 AppMacOS 15之前版本终端执行以下命令    sudo spctl --master-disable MacOS 15 开启任何来源  下载描述文件  AnySource.mobileconfig     双击安装描述文件  我的 App App Cleaner 8 卸载软件    Beyond Compare 好用的文件对比工具    Bob 翻译工具    Ch">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mietl.github.io/images/mac/dockPeek1920.png">
-<meta property="og:image" content="http://mietl.github.io/macos/top_icon.png">
-<meta property="og:image" content="http://mietl.github.io/files/developer.png">
-<meta property="og:image" content="http://mietl.github.io/files/menubar.png">
+<meta property="og:image" content="http://mietl.github.io/images/macos/top_icon.png">
+<meta property="og:image" content="http://mietl.github.io/images/macos/developer.png">
+<meta property="og:image" content="http://mietl.github.io/images/macos/menubar.jpg">
 <meta property="article:published_time" content="2024-08-26T11:30:02.000Z">
-<meta property="article:modified_time" content="2024-09-26T17:06:34.199Z">
+<meta property="article:modified_time" content="2024-09-27T10:31:37.592Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="MacOS">
 <meta name="twitter:card" content="summary">
@@ -28,15 +28,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727370402653">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1727433106611">
 
-<link rel="stylesheet" href="/css/style.css?v=1727370402653">
+<link rel="stylesheet" href="/css/style.css?v=1727433106611">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1727370402653">
+        <link rel="stylesheet" href="/custom.css?v=1727433106611">
     
 
 
@@ -46,7 +46,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1727370402653"></script>
+<script async src="/js/app.js?v=1727433106612"></script>
 
  
 
@@ -186,22 +186,9 @@
 			></i> </a
 		><a
 			class="mdui-ripple"
-			href="/null"
-			target="_blank"
-			mdui-tooltip="{content: '知乎'}"
-			style="
-				color: rgb(30, 136, 229);
-				background-color: rgba(30, 136, 229, .1);
-			"
-		>
-			<i
-				class="nexmoefont icon-zhihu"
-			></i> </a
-		><a
-			class="mdui-ripple"
 			href="https://twitter.com/mietl"
 			target="_blank"
-			mdui-tooltip="{content: 'Twitter'}"
+			mdui-tooltip="{content: 'x'}"
 			style="
 				color: rgb(59, 151, 239);
 				background-color: rgba(59, 151, 239, .1);
@@ -349,43 +336,46 @@
     
 </div>
 
-    <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="允许安装任意来源的-App"><a href="#允许安装任意来源的-App" class="headerlink" title="允许安装任意来源的 App"></a>允许安装任意来源的 App</h3><p><strong>小于 MacOS 15</strong>  终端执行以下命令   </p>
+    <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="允许安装任意来源的-App"><a href="#允许安装任意来源的-App" class="headerlink" title="允许安装任意来源的 App"></a>允许安装任意来源的 App</h3><p>MacOS 15之前版本终端执行以下命令   </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">sudo spctl --master-disable<br></code></pre></td></tr></table></figure>
-<p><strong>MacOS 15 开启任何来源</strong></p>
+<p>MacOS 15 开启任何来源</p>
 <ol>
 <li>下载描述文件  <a href="http://mietl.github.io/files/anysource.mobileconfig">AnySource.mobileconfig</a>    </li>
 <li>双击安装描述文件</li>
 </ol>
 <h2 id="我的-App"><a href="#我的-App" class="headerlink" title="我的 App"></a>我的 App</h2><ul>
-<li>App Cleaner 8  卸载软件   </li>
+<li>App Cleaner 8 卸载软件   </li>
 <li>Beyond Compare 好用的文件对比工具   </li>
 <li>Bob 翻译工具   </li>
-<li><a target="_blank" rel="noopener" href="https://openai.com/chatgpt/">ChatGPT</a></li>
+<li><a target="_blank" rel="noopener" href="https://openai.com/chatgpt/">ChatGPT</a> </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/huggingface/chat-macOS">HuggingChat</a></li>
 </ul>
-<h3 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h3><ul>
+<h3 id="📖-阅读"><a href="#📖-阅读" class="headerlink" title="📖 阅读"></a>📖 阅读</h3><ul>
 <li>Skim 简单的PDF阅读 </li>
 <li><a target="_blank" rel="noopener" href="https://arc.net/">Arc</a> 好看实用浏览器<br><code>brew install --cask arc</code></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/Ranchero-Software/NetNewsWire">NetNewsWire</a>  开源免费的 RSS 阅读器<br><code>brew install --cask netnewswire</code></li>
 <li><a target="_blank" rel="noopener" href="https://follow.is/">Follow</a> 下一代信息浏览器。 更喜欢 follow</li>
 </ul>
-<h3 id="开发🔨"><a href="#开发🔨" class="headerlink" title="开发🔨"></a>开发🔨</h3><ul>
+<h3 id="🔨-开发"><a href="#🔨-开发" class="headerlink" title="🔨 开发"></a>🔨 开发</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/toolbox-app/">JetBrains Toolbox</a>  管理JetBrains系列软件，更新   </li>
 <li><a target="_blank" rel="noopener" href="https://orbstack.dev/">OrbStack</a><br>  <code>brew install orbstack</code></li>
 <li><a target="_blank" rel="noopener" href="https://www.warp.dev/">Warp</a><br>  <code>brew install --cask warp</code></li>
 <li><a target="_blank" rel="noopener" href="https://zed.dev/">Zed</a>    </li>
 <li><a target="_blank" rel="noopener" href="https://www.cursor.com/">Cursor</a>    </li>
 <li>Google Chrome<br>浏览器插件<br><a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/cfpdbfmncaampihkmejogihjkenkonbn?hl=zh-CN">codebox</a></li>
-<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Visual Studio Code</a><br>  1.主题推荐 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=iwyvi.chinolor">Chinolor Theme</a><br>  2.字体推荐 FiraCode<br>  3.查看当前安装扩展 <code>bash code --list-extensions</code></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Visual Studio Code</a><br>  主题推荐 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=iwyvi.chinolor">Chinolor Theme</a><br>  字体推荐 FiraCode<br>  查看当前安装扩展 <code>bash code --list-extensions</code></li>
 <li>Android Studio 开发移动端App<br>  主题推荐  Mariana Pro Theme 和 我喜欢的配色方案<a href="http://mietl.github.io/files/chinolor.icls">Chinolor.icls</a>    </li>
 <li>Fleet</li>
 <li><a target="_blank" rel="noopener" href="https://gitbutler.com/">GitButler</a>   </li>
 <li><a target="_blank" rel="noopener" href="http://www.usebruno.com/">Bruno</a>  - 开源 IDE，测试 API工具。</li>
+<li>DevToys </li>
+<li>Proxyman</li>
 </ul>
-<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><ul>
+<h3 id="📝-笔记"><a href="#📝-笔记" class="headerlink" title="📝 笔记"></a>📝 笔记</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://anytype.io/">Anytype</a>  自由的笔记软件   </li>
 <li>Typora<br>主题推荐 <a target="_blank" rel="noopener" href="https://github.com/theme-nexmoe/typora-theme-nexmoe?tab=readme-ov-file">typora-theme-nexmoe</a></li>
 </ul>
-<h3 id="音乐🎵"><a href="#音乐🎵" class="headerlink" title="音乐🎵"></a>音乐🎵</h3><ul>
+<h3 id="🎵-音乐"><a href="#🎵-音乐" class="headerlink" title="🎵  音乐"></a>🎵  音乐</h3><ul>
 <li>NeteaseMusic   </li>
 <li><a target="_blank" rel="noopener" href="https://open.spotify.com/">Spotify</a>&#x2F;<a href="spotube.krtirtho.dev">Spotube</a></li>
 </ul>
@@ -394,8 +384,8 @@
 <li><a target="_blank" rel="noopener" href="https://d.keka.io/">Keka</a> 开源，可爱的压缩软件<br>  <code>brew install --cask keka </code></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/MrKai77/Loop">Loop</a> 最好用的窗口管理工具，丝滑   </li>
 <li><a target="_blank" rel="noopener" href="https://github.com/Caldis/Mos">Mos</a>  开源 让鼠标平滑，反向滚动   </li>
-<li>Proxifier  全局代理<br> 激活码<br> V2<br> P427L-9Y552-5433E-8DSR3-58Z68<br> V3<br> 3CWNN-WYTP4-SD83W-ASDFR-84KEA</li>
-<li>SoundSource 声音控制软件，可以控制单个应用声音大小<br>  激活码<br>  Your Name:  <code>Pertim Macwk</code><br>  Your Code:  <code>ZLAT-QXP9-K3DW-K2UH-2WX9-96NH-3KPJ-NDY6-DC9D</code>  </li>
+<li><strong>Proxifier</strong>  全局代理  <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 激活码</span><br><span class="hljs-comment"># V2</span><br>P427L-9Y552-5433E-8DSR3-58Z68<br><span class="hljs-comment"># V3</span><br>3CWNN-WYTP4-SD83W-ASDFR-84KEA<br></code></pre></td></tr></table></figure></li>
+<li>SoundSource 声音控制软件，可以控制单个应用声音大小    <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 激活码   </span><br>Your Name:  Pertim Macwk   <br>Your Code:  ZLAT-QXP9-K3DW-K2UH-2WX9-96NH-3KPJ-NDY6-DC9D<br></code></pre></td></tr></table></figure></li>
 <li><a target="_blank" rel="noopener" href="https://z.weixin.qq.com/">微信输入法</a> 简洁的输入法， 支持跨设备(手机&#x2F;电脑)复制粘贴</li>
 <li>iPreview - 强大的快捷预览扩展程序(付费)   </li>
 <li>Caffeinated  防休眠应用 </li>
@@ -425,16 +415,22 @@
 <li>Riffo 通过 AI 重命名文件名   </li>
 <li><a target="_blank" rel="noopener" href="https://github.com/Tencent/lemon-cleaner">Tencent Lemon</a>  腾讯开源的Mac清理工具   </li>
 <li>Things3  好看的任务清单ToDo软件   </li>
+<li>Reminders MenuBar + 提醒事项</li>
 <li>ToDesk 远程控制工具   </li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/xnip-%E6%88%AA%E5%9B%BE-%E6%A0%87%E6%B3%A8/id1221250572?mt=12">Xnip</a> 免费的截图软件，支持长截图，好看   </li>
 <li><a target="_blank" rel="noopener" href="https://github.com/mulaRahul/keyviz">keyviz </a> 在屏幕上显示，你正在按下的键   </li>
-<li><a target="_blank" rel="noopener" href="https://iina.io/">IINA</a> 开源好用的视频播放器<br>  <code>brew install --cask iina </code></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/localsend/localsend">LocalSend</a></li>
 </ul>
-<h3 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h3><ul>
+<h3 id="视频-📺"><a href="#视频-📺" class="headerlink" title="视频 📺"></a>视频 📺</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://iina.io/">IINA</a> 开源好用的视频播放器<br>  <code>brew install --cask iina </code></li>
+<li>哔哩哔哩</li>
+</ul>
+<h3 id="社交-💬"><a href="#社交-💬" class="headerlink" title="社交 💬"></a>社交 💬</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/%E5%8D%B3%E5%88%BBapp/id966129812">即刻(ios)</a> 上班摸鱼   </li>
 <li><a target="_blank" rel="noopener" href="https://mac.weixin.qq.com/">WeChat</a>  聊天   </li>
 <li>Mimestream  好用的Gmail邮箱</li>
 <li>Discord<br>  <code>brew install --cask discord </code></li>
+<li>Telegram </li>
 <li>TencentMeeting - 腾讯会议 开会讨论</li>
 </ul>
 <h3 id="编程字体"><a href="#编程字体" class="headerlink" title="编程字体"></a>编程字体</h3><p><a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode">FiraCode</a></p>
@@ -443,27 +439,20 @@
 <li><a target="_blank" rel="noopener" href="https://xmac.app/app/">xmac</a></li>
 </ul>
 <h3 id="Mac书签"><a href="#Mac书签" class="headerlink" title="Mac书签"></a>Mac书签</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023年🧑‍💻工程师的 Mac 工具箱2023年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>    </li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023年🧑‍💻工程师的 Mac 工具箱2023年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>   </li>
 <li><a target="_blank" rel="noopener" href="https://44maker.github.io/wiki/Mac/index.html">终极配置教程</a></li>
 </ul>
 <h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/corpnewt/gibMacOS">GitHub - corpnewt&#x2F;gibMacOS: Py2&#x2F;py3 script that can download macOS components direct from Apple</a>    </li>
 <li><a target="_blank" rel="noopener" href="https://qiuchenlyopensource.github.io/Documentaions/starter-topic.html">Mac软件注入 | InjectLib</a></li>
 </ul>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
-<li>command + option +  x 剪贴文件</li>
-</ol>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>  <kbd>command</kbd> + <kbd>option</kbd> + <kbd>x</kbd> 剪贴文件 </p>
 <h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ol>
-<li><p>访达 command 键 + 拖动软件 可以将软件图标添加到访达顶部，快捷使用<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/macos/top_icon.png" alt="image.png" data-caption="image.png" loading="lazy">    </p>
-</li>
-<li><p>option 键  + 拖动访达窗口大小，可以记录窗口大小，下次打开&#x2F;新建窗口时，还是之前拖动的大小   </p>
-</li>
-<li><p>在 ~&#x2F;Users&#x2F; 用户名下 创建 Developer 目录,系统会自动添加锤子图标，你可以将他添加到边栏<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/files/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </p>
-</li>
-<li><p>之前菜单栏日期莫名其妙变成灰色， 长按option 点击日期，可以点亮<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/files/menubar.png" alt="menubar.png" data-caption="menubar.png" loading="lazy"> </p>
-</li>
-<li><p>终端代理 </p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 1082 为代理端口号，替换成你代理软件的端口 </span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">https_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">http_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">all_proxy</span>=socks5://127.0.0.1:1082<br></code></pre></td></tr></table></figure></li>
+<li>访达 <kbd>command</kbd> 键 + 拖动软件 可以将软件图标添加到访达顶部，快捷使用<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/top_icon.png" alt="image.png" data-caption="image.png" loading="lazy">    </li>
+<li><kbd>option</kbd> 键  + 拖动访达窗口大小，可以记录窗口大小，下次打开&#x2F;新建窗口时，还是之前拖动的大小   </li>
+<li>在 ~&#x2F;Users&#x2F; 用户名下 创建 <strong>Developer</strong> 目录,系统会自动添加锤子图标，你可以将他添加到边栏<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </li>
+<li>长按 <kbd>option</kbd> 键后 点击日期，可以打开勿扰模式<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/menubar.jpg" alt="menubar.png" data-caption="menubar.png" loading="lazy"></li>
+<li>终端代理 <figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 1082 为代理端口号，替换成你代理软件的端口 </span><br><span class="hljs-built_in">export</span> <span class="hljs-attribute">https_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">http_proxy</span>=http://127.0.0.1:1082;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">all_proxy</span>=socks5://127.0.0.1:1082;<br></code></pre></td></tr></table></figure></li>
 </ol>
 
     
@@ -499,7 +488,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1727370402619"></script>
+    <script async src="/js/copy-codeblock.js?v=1727433106571"></script>
   
 
   
@@ -533,7 +522,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%81%E8%AE%B8%E5%AE%89%E8%A3%85%E4%BB%BB%E6%84%8F%E6%9D%A5%E6%BA%90%E7%9A%84-App"><span class="toc-number">1.1.</span> <span class="toc-text">允许安装任意来源的 App</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-App"><span class="toc-number">2.</span> <span class="toc-text">我的 App</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%85%E8%AF%BB"><span class="toc-number">2.1.</span> <span class="toc-text">阅读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%F0%9F%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">开发🔨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0"><span class="toc-number">2.3.</span> <span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%F0%9F%8E%B5"><span class="toc-number">2.4.</span> <span class="toc-text">音乐🎵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7"><span class="toc-number">2.5.</span> <span class="toc-text">系统工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.6.</span> <span class="toc-text">实用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BA%A4"><span class="toc-number">2.7.</span> <span class="toc-text">社交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%AD%97%E4%BD%93"><span class="toc-number">2.8.</span> <span class="toc-text">编程字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E8%A7%A3%E7%AB%99"><span class="toc-number">3.</span> <span class="toc-text">破解站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac%E4%B9%A6%E7%AD%BE"><span class="toc-number">3.1.</span> <span class="toc-text">Mac书签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">3.2.</span> <span class="toc-text">工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">4.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">小技巧</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%81%E8%AE%B8%E5%AE%89%E8%A3%85%E4%BB%BB%E6%84%8F%E6%9D%A5%E6%BA%90%E7%9A%84-App"><span class="toc-number">1.1.</span> <span class="toc-text">允许安装任意来源的 App</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-App"><span class="toc-number">2.</span> <span class="toc-text">我的 App</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%96-%E9%98%85%E8%AF%BB"><span class="toc-number">2.1.</span> <span class="toc-text">📖 阅读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A8-%E5%BC%80%E5%8F%91"><span class="toc-number">2.2.</span> <span class="toc-text">🔨 开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9D-%E7%AC%94%E8%AE%B0"><span class="toc-number">2.3.</span> <span class="toc-text">📝 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%B5-%E9%9F%B3%E4%B9%90"><span class="toc-number">2.4.</span> <span class="toc-text">🎵  音乐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7"><span class="toc-number">2.5.</span> <span class="toc-text">系统工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.6.</span> <span class="toc-text">实用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E9%A2%91-%F0%9F%93%BA"><span class="toc-number">2.7.</span> <span class="toc-text">视频 📺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BA%A4-%F0%9F%92%AC"><span class="toc-number">2.8.</span> <span class="toc-text">社交 💬</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%AD%97%E4%BD%93"><span class="toc-number">2.9.</span> <span class="toc-text">编程字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E8%A7%A3%E7%AB%99"><span class="toc-number">3.</span> <span class="toc-text">破解站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac%E4%B9%A6%E7%AD%BE"><span class="toc-number">3.1.</span> <span class="toc-text">Mac书签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">3.2.</span> <span class="toc-text">工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">4.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">小技巧</span></a></li></ol>
                 </div>
             </button>
             
