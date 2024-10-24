@@ -71,62 +71,6 @@ article ul li {
   line-height: 2em !important;
 }
 
-.prev-next::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
-.prev-next .new {
-  float: right;
-}
-
-.prev-next .old {
-  float: left;
-}
-
-
-
-.prev-next {
-  padding-top: 24px;
-  margin-bottom: 24px;
-}
-
-
-.prev-next .pager-link {
-  display: block;
-  border-radius: 8px;
-  padding: 11px 16px 13px;
-  width: 100%;
-  height: 100%;
-  transition: border-color 0.25s;
-}
-
-
-.prev-next .pager-link.next {
-  margin-left: auto;
-  text-align: right;
-}
-
-.prev-next .desc {
-  display: block;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(60, 60, 67, .78);
-}
-
-
-.prev-next .title {
-  display: block;
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-primary);
-  transition: color 0.25s;
-}
-
 
 .nexmoe-archives .categories a {
   font-size: 12px;
@@ -223,7 +167,7 @@ fira_code
 
 
 /* 代码高亮 */
-.hljs {
+/* .hljs {
   color: #e4dfd7;
   background: #2b312c;
 }
@@ -318,7 +262,7 @@ fira_code
 .hljs-punctuation,
 .hljs-tag {
   color: #f07c82;
-}
+} */
 
 
 /* hbe 文章加密样式 */

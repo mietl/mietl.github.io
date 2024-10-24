@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="Git startedGit 学习 如何开始使用 Git配置当你要做一些提交时，git 需要知道你是谁，因此你需要配置用户名和邮件地址，他会作为你的提交人信息 # 设置用户名git config --global user.name &quot;mietl&quot; # 设置你的邮箱git config --global user.email &quot;mietl.moe@icolud.com">
+<meta name="description" content="Git startedGit 学习 如何开始使用 Git配置当你要做一些提交时，git 需要知道你是谁，因此你需要配置用户名和邮件地址，他会作为你的提交人信息 1234# 设置用户名 git config --global user.name &quot;mietl&quot;  # 设置你的邮箱 git config --global user.email &quot;mietl.moe@ico">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git started">
 <meta property="og:url" content="http://mietl.github.io/2023/11/21/git/git-started/index.html">
 <meta property="og:site_name" content="T:DM">
-<meta property="og:description" content="Git startedGit 学习 如何开始使用 Git配置当你要做一些提交时，git 需要知道你是谁，因此你需要配置用户名和邮件地址，他会作为你的提交人信息 # 设置用户名git config --global user.name &quot;mietl&quot; # 设置你的邮箱git config --global user.email &quot;mietl.moe@icolud.com">
+<meta property="og:description" content="Git startedGit 学习 如何开始使用 Git配置当你要做一些提交时，git 需要知道你是谁，因此你需要配置用户名和邮件地址，他会作为你的提交人信息 1234# 设置用户名 git config --global user.name &quot;mietl&quot;  # 设置你的邮箱 git config --global user.email &quot;mietl.moe@ico">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mietl.github.io/images/git/status.jpg">
 <meta property="og:image" content="http://mietl.github.io/images/git/ssh.jpg">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://mietl.github.io/images/git/issue1.png">
 <meta property="og:image" content="http://mietl.github.io/images/git/issue2.jpg">
 <meta property="article:published_time" content="2023-11-21T08:30:08.000Z">
-<meta property="article:modified_time" content="2024-10-22T03:09:14.600Z">
+<meta property="article:modified_time" content="2024-10-24T11:21:39.570Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -30,15 +30,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1729566562263">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1729768907510">
 
-<link rel="stylesheet" href="/css/style.css?v=1729566562263">
+<link rel="stylesheet" href="/css/style.css?v=1729768907510">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1729566562263">
+        <link rel="stylesheet" href="/custom.css?v=1729768907510">
     
 
 
@@ -48,11 +48,13 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1729566562263"></script>
+<script async src="/js/app.js?v=1729768907511"></script>
 
  
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
+<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
 </head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/cover.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
   <div class="nexmoe-avatar mdui-ripple">
     <a href="/" title="mietl">
@@ -188,7 +190,7 @@
 			></i> </a
 		><a
 			class="mdui-ripple"
-			href="https://twitter.com/mietl"
+			href="https://x.com/mietlx"
 			target="_blank"
 			mdui-tooltip="{content: 'x'}"
 			style="
@@ -317,15 +319,15 @@
 </div>
 <!-- .nexmoe-drawer -->
 </div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
-  <article>
-    
-        <div class="nexmoe-post-cover absolute" style="padding-top: 32.44325767690254%;"> 
-            <img src="http://mietl.github.io/images/git/git.svg" alt="Git started" loading="lazy">
-            <h1>Git started</h1>
-        </div>
-    
-    
-    <div class="nexmoe-post-meta">
+    <article>
+      
+          <div class="nexmoe-post-cover absolute" style="padding-top: 32.44325767690254%;"> 
+              <img src="http://mietl.github.io/images/git/git.svg" alt="Git started" loading="lazy">
+              <h1>Git started</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
         <a class="nexmoefont icon-calendar-fill">2023年11月21日</a>
         
@@ -339,10 +341,13 @@
     
     
 </div>
-
-    <h1 id="Git-started"><a href="#Git-started" class="headerlink" title="Git started"></a>Git started</h1><p>Git 学习</p>
+  
+      <h1 id="Git-started"><a href="#Git-started" class="headerlink" title="Git started"></a>Git started</h1><p>Git 学习</p>
 <h2 id="如何开始使用-Git"><a href="#如何开始使用-Git" class="headerlink" title="如何开始使用 Git"></a>如何开始使用 Git</h2><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>当你要做一些提交时，git 需要知道你是谁，因此你需要配置用户名和邮件地址，他会作为你的提交人信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置用户名</span><br>git config --global user.name <span class="hljs-string">&quot;mietl&quot;</span> <br><span class="hljs-comment"># 设置你的邮箱</span><br>git config --global user.email <span class="hljs-string">&quot;mietl.moe@icolud.com&quot;</span> <br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D"># 设置用户名</span></span>
+<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">config</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--global</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">user.name</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;mietl&quot;</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #6A737D"># 设置你的邮箱</span></span>
+<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">config</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--global</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">user.email</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;mietl.moe@icolud.com&quot;</span></span></code></pre></div></div></figure>
 
 <p>使用<code>—global</code>选项后、他将保存到你的系统中，你只需要执行一次。</p>
 <p>添加后你可以使用 <code>git config --list </code>进行查看，你也可以在其他地方配置获取查看他们</p>
@@ -359,7 +364,7 @@
 </blockquote>
 <p>如果你跟踪了某个文件，修改后需要重新添加到<code>暂缓区</code>中 可以使用<code>git add . </code>将所有文件添加到<code>暂缓区</code>中</p>
 <p>对于已经存在的仓库，通过 <code>git clone</code>命令 它会将完整的仓库克隆过来包含历史提交记录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/meitl.git<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">clone</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">https://github.com/meitl.git</span></span></code></pre></div></div></figure>
 
 <h4 id="文件状态"><a href="#文件状态" class="headerlink" title="文件状态"></a>文件状态</h4><p>已跟踪的文件，具有不同状态</p>
 <ul>
@@ -377,16 +382,20 @@
 <hr>
 <h4 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h4><p>如果你不希望某些文件被上传，创建 <code>.gitignore</code>文件<br>定义一些排除规则，该文件指定的文件或者目录，将不会被 git 跟踪</p>
 <h4 id="文件提交"><a href="#文件提交" class="headerlink" title="文件提交"></a>文件提交</h4><p>将把文件都提交到暂缓区后，通过<code>git commit 命令进行</code>提交，添加 -m 参数 添加你本次提交到信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;hhhh&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">commit</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-m</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;hhhh&quot;</span></span></code></pre></div></div></figure>
 
 <p>通-a 参数可以将所有文件添加到暂存区中省略<code>git add .</code>的步骤</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git commit -a -m <span class="hljs-string">&quot;提交说明&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">commit</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-a</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-m</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;提交说明&quot;</span></span></code></pre></div></div></figure>
 
 <hr>
 <h4 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h4><p>使用 <code>git log</code> 他会列出所有的历史提交信息<br>包含 SHA-1 校验和(每次提交的唯一标识)、作者的名字和电子邮件地址、提交时间以及提交说明</p>
 <p>查看更加直观的信息<code>git log --pretty=oneline</code><br>当存在分支 <code>git log --pretty=oneline --grap</code> 更易于查看</p>
 <h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>HEAD 是当前分支的指针，他记录着当前处于的版本<br>默认他指向该分支的最后一次提交，你可以通过修改他</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git reset --hard HEAD^  // ^上一版本  ^^上一个版本的前一个版本<br><br>git reset --hard HEAD~n   // 回退至前多少次版本<br><br>git reset --hard 7256f72b  // 指定回退至某次提交 commitId;<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">reset</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--hard</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">HEAD^</span><span style="color: #E1E4E8">  </span><span style="color: #9ECBFF">//</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">^上一版本</span><span style="color: #E1E4E8">  </span><span style="color: #9ECBFF">^^上一个版本的前一个版本</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">reset</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--hard</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">HEAD~n</span><span style="color: #E1E4E8">   </span><span style="color: #9ECBFF">//</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">回退至前多少次版本</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">reset</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--hard</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">7256</span><span style="color: #9ECBFF">f72b</span><span style="color: #E1E4E8">  </span><span style="color: #9ECBFF">//</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">指定回退至某次提交</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">commitId</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
 
 <h4 id="远程仓库验证"><a href="#远程仓库验证" class="headerlink" title="远程仓库验证"></a>远程仓库验证</h4><p>你可以通过两种方式对远程仓库进行连接</p>
 <p>当需要对私有仓库进行操作时，Git 服务器需要知道你是谁</p>
@@ -394,10 +403,10 @@
 <li>通过 SSH 密钥验证</li>
 </ol>
 <p>通过执行命令生成公钥和私钥</p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c">ssh-keygen -t ed25519 -C “you email<span class="hljs-string">&quot;       // 通过-C添加注释</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #e1e4e8">ssh-keygen -t ed25519 -C “you email&quot;       // 通过-C添加注释</span></span></code></pre></div></div></figure>
 
 <p>你也可以采用不同的加密方式 ，只要 Git 服务器支持</p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c">ssh-keygen -t rsa -b <span class="hljs-number">2048</span> -C “hhh<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #e1e4e8">ssh-keygen -t rsa -b 2048 -C “hhh&quot;</span></span></code></pre></div></div></figure>
 
 <p>生成后在你用户文件(&#x2F;Users&#x2F;用户名&#x2F;.ssh)下会产生.ssh 隐藏目录</p>
 <p><img src="http://mietl.github.io/images/git/ssh.jpg"></p>
@@ -406,27 +415,28 @@
 <h4 id="与远程仓库建立连接"><a href="#与远程仓库建立连接" class="headerlink" title="与远程仓库建立连接"></a>与远程仓库建立连接</h4><p>默认情况下通过 git clone 命令下载的代码，是已经与远程仓库进行连接的</p>
 <p>当你初始化一个仓库时，如果你需要管理远程仓库</p>
 <p>添加远程地址，让本地仓库和远程仓库建立连接</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git remote add &lt;name&gt; &lt;url&gt;<br>git remote add origin  https://github.com/mietl/TBlog.git<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remote</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">add</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">&lt;</span><span style="color: #9ECBFF">nam</span><span style="color: #E1E4E8">e</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">&lt;</span><span style="color: #9ECBFF">ur</span><span style="color: #E1E4E8">l</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remote</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">add</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8">  </span><span style="color: #9ECBFF">https://github.com/mietl/TBlog.git</span></span></code></pre></div></div></figure>
 
 <p>添加后 通过<code>git remove</code> 命令查看当前建立的远程连接地址<br>使用<code>-v</code>参数 可以查看更详细的信息<br><img src="http://mietl.github.io/images/git/remote_v.jpg"></p>
 <p>重命名</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git remote rename origin blog<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remote</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">rename</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">blog</span></span></code></pre></div></div></figure>
 
 <p>删除远程地址</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git remote remove blog<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remote</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remove</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">blog</span></span></code></pre></div></div></figure>
 
 <h4 id="Git-标签"><a href="#Git-标签" class="headerlink" title="Git 标签"></a>Git 标签</h4><p>当提交历史过多时，如果你想快速找到历史提交中的某次重要版本，你可以为他添加标签</p>
 <p>创建标签</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git tag v1.0.0<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">tag</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">v1.0.0</span></span></code></pre></div></div></figure>
 
 <p>在标签上添加一些附注信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git tag -a v1.0.1 -m <span class="hljs-string">&#x27;fixes&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">tag</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-a</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">v1.0.1</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-m</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;fixes&#39;</span></span></code></pre></div></div></figure>
 
 <p>将标签上传到远程创建中</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git push origin v1.0.0<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">push</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">v1.0.0</span></span></code></pre></div></div></figure>
 
 <p>上传所有 tags</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git push origin --tags<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">push</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--tags</span></span></code></pre></div></div></figure>
 
 <h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><ol>
 <li>问题一: 本地分支的上游分支（跟踪分支）</li>
@@ -439,7 +449,8 @@
 <p>原因是<code>git pull 在执行 merge</code>的过程中，由于 Git 存在分支的概念，他并不知道你要合并那条分支<br>你可以明确指定 <code>git pull origin main</code> 具体要合并的分支，但这样在进行 push 操作时也需要明确指定</p>
 <p>你可能会觉得太麻烦，提示中还有另外一个解决方案。</p>
 <p>你可以通过执行下面命令设置本地分支与远程分支的跟踪关系</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/main main<br><span class="hljs-comment"># 最后 main可以省略，默认他会设置当前所在的分支</span><br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">branch</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--set-upstream-to=origin/main</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">main</span></span>
+<span class="line"><span style="color: #6A737D"># 最后 main可以省略，默认他会设置当前所在的分支</span></span></code></pre></div></div></figure>
 
 <p>将当前分支指定上游分支 为远程的 main 分支，指定后 Git 就能知道跟踪是那条分支</p>
 <ol start="2">
@@ -447,7 +458,7 @@
 </ol>
 <p>在执行<code>git merge</code>命令时，如果你的远程仓库有提交历史了(已经存在文件了)</p>
 <p>产生原因: Git 默认不允许两个不相干历史进行合并、（没有同一个基础分支历史）<br>如果你依旧想进行合并 添加<code>allow-unrelated-histories</code>参数 来允许提交不相关的提交历史</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git merge --allow-unrelated-histories<br></code></pre></td></tr></table></figure>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">merge</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--allow-unrelated-histories</span></span></code></pre></div></div></figure>
 
 <p>参考链接 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase">https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase</a></p>
 <blockquote>
@@ -458,77 +469,11 @@
 </ol>
 <h4 id="集中式版本控制与分布式版本控制的区别？"><a href="#集中式版本控制与分布式版本控制的区别？" class="headerlink" title="集中式版本控制与分布式版本控制的区别？"></a>集中式版本控制与分布式版本控制的区别？</h4><p><strong>集中式版本控制</strong>： 只在服务器中保存了代码提交的历史记录<br><strong>分布式版本控制</strong>： 客户端与服务器中都有保存完整的历史记录， 在进行克隆操作时会对仓库代码进行完整备份，包括历史记录</p>
 
-    
-
-    <nav class="post-nav prev-next">
-        
-             <!-- 先找到与当前文字相同的目录 -->
-            
-                 <!-- 先找到与当前文字相同的目录 -->
-                    
-                    
-                         
-                        
-                    
-                         
-                         <!-- 在找到当前文章所在的 index -->
-                            
-                            
-                                 
-                                
-                                
-
-                           
-                                
-                                 <!-- 下一篇文章 --> 
-                                    <div class="new pager">
-                                        <a  class="pager-link next" href="/2024/01/10/tools/pnpm/">
-                                            <span class="desc" ></span>
-                                            <span class="title">#pnpm包管理</span>
-                                          </a>
-                                    </div>
-                                
-                                
-                            
-                                 
-                                
-                                
-
-                           
-                                
-                                
-                                
-                            
-                                 
-                                
-                                  <!-- 上一篇文章 --> 
-                                    <div class="old pager">
-                                        <a  class="pager-link prev" href="/2023/11/13/git/git-branch/">
-                                            <span class="desc"></span>
-                                            <span class="title" >#Git branch</span>
-                                        </a>
-                                    </div>
-                                
-
-                           
-                                
-                                
-                                
-                            
-                        
-                    
-                         
-                        
-                    
-                
-            
-          
-        
-    </nav>
-  </article>
-
-  
       
+    </article>
+  
+    
+        
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>mietl<br>
         <strong>本文链接：</strong><a href="http://mietl.github.io/2023/11/21/git/git-started/" title="http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;21&#x2F;git&#x2F;git-started&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;mietl.github.io&#x2F;2023&#x2F;11&#x2F;21&#x2F;git&#x2F;git-started&#x2F;</a><br>
@@ -539,22 +484,22 @@
     </div>
 
 
-  
-  
-  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+    <div class="nexmoe-post-meta nexmoe-rainbow">
    
     
         <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Git/" rel="tag">Git</a>
     
 </div>
+    
+    
+      <script async src="/js/copy-codeblock.js?v=1729768907437"></script>
+    
   
-  
-    <script async src="/js/copy-codeblock.js?v=1729566562211"></script>
-  
-
-  
-      <div class="nexmoe-post-footer">
-          <script src="https://giscus.app/client.js"
+    
+        <div class="nexmoe-post-footer">
+            <script src="https://giscus.app/client.js"
     data-repo="mietl/mietl.github.io"
     data-repo-id="R_kgDOJgD8TA"
     data-category="General"
@@ -571,9 +516,9 @@
     async>
 </script>
 
-      </div>
-  
-</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        </div>
+    
+  </div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
         <div class="nexmoe-tool">
 
             
@@ -593,4 +538,25 @@
             <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
         </div>
     </div>
-</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div><!-- hexo injector body_end start -->
+  <script>
+  const CODE_CONFIG = {
+    beautify: undefined,
+    highlightCopy: undefined,
+    highlightLang: undefined,
+    highlightHeightLimit: undefined,
+    isHighlightShrink: undefined,
+    copy: {
+      success: 'undefined',
+      error: 'undefined',
+      noSupport: 'undefined',
+    }
+  };
+  console.log(
+    `%c hexo-shiki-plugin %c v1.0.27 %c https://github.com/nova1751/hexo-shiki-plugin`,
+    "color: #fff; background: #5f5f5f",
+    "color: #fff; background: #80c8f8",
+    ""
+  );
+  </script>
+  <!-- hexo injector body_end end --></body></html>
