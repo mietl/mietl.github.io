@@ -167,7 +167,7 @@ fira_code
 
 
 /* 代码高亮 */
-.hljs {
+/* .hljs {
   color: #e4dfd7;
   background: #2b312c;
 }
@@ -262,7 +262,7 @@ fira_code
 .hljs-punctuation,
 .hljs-tag {
   color: #f07c82;
-}
+} */
 
 
 /* hbe 文章加密样式 */
