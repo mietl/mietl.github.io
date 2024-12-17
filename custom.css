@@ -15,7 +15,7 @@
 body {
   background: #f9f9f9;
   font-family: Helvetica,ResourceHanRoundedCN, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
 }
 
 .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true {
