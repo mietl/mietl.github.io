@@ -1,5 +1,6 @@
 :root {
-  --color-primary: #f07c82;
+  /* --color-primary: #f07c82; */
+  --color-primary: #DF6574;
   --color-primary-bg: rgba(238, 200, 189, 0.14);
 }
 
@@ -19,7 +20,8 @@ body {
 }
 
 .nexmoe #nexmoe-header .nexmoe-list .nexmoe-list-item.true {
-  --color-primary: #f0908c !important;
+  /* --color-primary: #f0908c !important; */
+  --color-primary: #DF6574 !important;
 }
 
 .nexmoe-post .nexmoe-post-cover h1 {
