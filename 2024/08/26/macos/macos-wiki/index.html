@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://mietl.github.io/images/macos/developer.png">
 <meta property="og:image" content="http://mietl.github.io/images/macos/menubar.jpg">
 <meta property="article:published_time" content="2024-08-26T11:30:02.000Z">
-<meta property="article:modified_time" content="2025-07-06T19:22:16.737Z">
+<meta property="article:modified_time" content="2025-07-21T01:48:58.508Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="MacOS">
 <meta name="twitter:card" content="summary">
@@ -28,15 +28,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1751829745490">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1753062553563">
 
-<link rel="stylesheet" href="/css/style.css?v=1751829745490">
+<link rel="stylesheet" href="/css/style.css?v=1753062553563">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1751829745490">
+        <link rel="stylesheet" href="/custom.css?v=1753062553563">
     
 
 
@@ -46,13 +46,11 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1751829745491"></script>
+<script async src="/js/app.js?v=1753062553563"></script>
 
  
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
-<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
 </head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/cover.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
   <div class="nexmoe-avatar mdui-ripple">
     <a href="/" title="mietl">
@@ -296,44 +294,45 @@
 </ul>
 <h3 id="键盘设置"><a href="#键盘设置" class="headerlink" title="键盘设置"></a>键盘设置</h3><p>键盘 -&gt; 键重复速率和重复前延迟拉到最大</p>
 <h3 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h3><p>打开系统偏好设置-&gt;触控板-&gt;光标与点按<br>勾选 ✔ 轻点来点按<br>跟踪速度移动到最快</p>
-<p>辅助功能-&gt;指针控制-触控板选项<br>勾选 ✔ 使用触控板进行拖移<br>拖拽样式选择三指拖移</p>
-<h2 id="开发配置"><a href="#开发配置" class="headerlink" title="开发配置"></a>开发配置</h2><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D"># 配置用户名</span></span>
-<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">config</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--global</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">user.name</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;mietl&quot;</span></span>
-<span class="line"><span style="color: #6A737D"># 配置邮箱 </span></span>
-<span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">config</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--global</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">user.email</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;mietl.moe@icloud.com&quot;</span></span></code></pre></div></div></figure>
-
-<h4 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h4><figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">sh</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-c</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;$(</span><span style="color: #B392F0">curl</span><span style="color: #9ECBFF"> </span><span style="color: #79B8FF">-fsSL</span><span style="color: #9ECBFF"> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span></span></code></pre></div></div></figure>
-
-<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">/bin/bash</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-c</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;$(</span><span style="color: #B392F0">curl</span><span style="color: #9ECBFF"> </span><span style="color: #79B8FF">-fsSL</span><span style="color: #9ECBFF"> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span></span></code></pre></div></div></figure>
+<p>辅助功能-&gt;指针控制 - 触控板选项<br>勾选 ✔ 使用触控板进行拖移<br>拖拽样式选择三指拖移</p>
+<h2 id="开发配置"><a href="#开发配置" class="headerlink" title="开发配置"></a>开发配置</h2><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><pre><code class="bash"># 配置用户名
+git config --global user.name &quot;mietl&quot;
+# 配置邮箱 
+git config --global user.email &quot;mietl.moe@icloud.com&quot;
+</code></pre>
+<h4 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h4><pre><code class="bash">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
+</code></pre>
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><pre><code class="bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
 <p>安装成功后按照提示终端执行</p>
-<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #79B8FF">echo</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">&gt;&gt;</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">~/.zprofile</span></span>
-<span class="line"><span style="color: #79B8FF">eval</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;$(</span><span style="color: #B392F0">/opt/homebrew/bin/brew</span><span style="color: #9ECBFF"> shellenv)&quot;</span></span></code></pre></div></div></figure> 
-
+<pre><code class="bash">echo &#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39; &gt;&gt; ~/.zprofile
+eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot; 
+</code></pre>
 <p>安装 cask 用于后续安装软件</p>
-<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">brew</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">install</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">cask</span></span></code></pre></div></div></figure>
-
+<pre><code class="bash">brew install cask
+</code></pre>
 <h4 id="zshenv"><a href="#zshenv" class="headerlink" title=".zshenv"></a>.zshenv</h4><p>我的环境变量都写在这个文件</p>
-<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">#进入用户目录</span></span>
-<span class="line"><span style="color: #79B8FF">cd</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">~/</span><span style="color: #E1E4E8"> </span></span>
-<span class="line"><span style="color: #B392F0">wget</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">https://raw.githubusercontent.com/mietl/dotfiles/main/.zshenv</span></span></code></pre></div></div></figure>
+<pre><code class="bash">#进入用户目录
+cd ~/ 
+wget https://raw.githubusercontent.com/mietl/dotfiles/main/.zshenv
+</code></pre>
+<h4 id="starship-美化终端提示"><a href="#starship-美化终端提示" class="headerlink" title="starship 美化终端提示"></a>starship 美化终端提示</h4><pre><code class="bash">brew install starship
+echo &#39;eval &quot;$(starship init zsh)&quot;&#39; &gt;&gt; ~/.zshrc
 
-<h4 id="starship-美化终端提示"><a href="#starship-美化终端提示" class="headerlink" title="starship 美化终端提示"></a>starship 美化终端提示</h4><figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">brew</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">install</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">starship</span></span>
-<span class="line"><span style="color: #79B8FF">echo</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;eval &quot;$(starship init zsh)&quot;&#39;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">&gt;&gt;</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">~/.zshrc</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #B392F0">mkdir</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-p</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">~/.config</span></span>
-<span class="line"><span style="color: #79B8FF">cd</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">~/.config</span></span>
-<span class="line"><span style="color: #B392F0">wget</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">https://raw.githubusercontent.com/mietl/dotfiles/main/starship.toml</span></span></code></pre></div></div></figure>
-
+mkdir -p ~/.config
+cd ~/.config
+wget https://raw.githubusercontent.com/mietl/dotfiles/main/starship.toml
+</code></pre>
 <h2 id="我的-App"><a href="#我的-App" class="headerlink" title="我的 App"></a>我的 App</h2><h3 id="📖-阅读"><a href="#📖-阅读" class="headerlink" title="📖 阅读"></a>📖 阅读</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://skim-app.sourceforge.io/">Skim</a> 简单的 PDF 阅读 </li>
 <li><a target="_blank" rel="noopener" href="https://arc.net/">Arc</a> 好看实用浏览器<br><code>brew install --cask arc</code></li>
-<li><a target="_blank" rel="noopener" href="https://follow.is/">Folo</a> RSS信息浏览器。 </li>
+<li><a target="_blank" rel="noopener" href="https://follow.is/">Folo</a> RSS 信息浏览器。 </li>
 <li><a target="_blank" rel="noopener" href="https://www.diabrowser.com/download">Dia</a> 关注隐私的 AI 浏览器</li>
 <li>Perplexity  基于 AI 的搜索引擎，提供简洁、快速和引用支持的答案，适合快速知识获取和查找资料</li>
 </ul>
 <h3 id="🔨-开发"><a href="#🔨-开发" class="headerlink" title="🔨 开发"></a>🔨 开发</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/toolbox-app/">JetBrains Toolbox</a>  管理 JetBrains 系列软件，更新   </li>
-<li><a target="_blank" rel="noopener" href="https://orbstack.dev/">OrbStack</a>  相比 Docker Desktop，更轻便且更高效， 内存占用更小<br>  <code>brew install orbstack</code></li>
+<li><a target="_blank" rel="noopener" href="https://orbstack.dev/">OrbStack</a>  相比 Docker Desktop，更轻便且更高效，内存占用更小<br>  <code>brew install orbstack</code></li>
 <li><a target="_blank" rel="noopener" href="https://www.warp.dev/">Warp</a>  一款现代化终端，支持 AI 自动补全、命令建议等，提升命令行效率<br>  <code>brew install --cask warp</code></li>
 <li><a target="_blank" rel="noopener" href="https://ghostty.org/">Ghostty</a> 👻 高性能终端模拟器，注重跨平台和低资源占用，界面现代，响应迅速</li>
 <li><a target="_blank" rel="noopener" href="https://zed.dev/">Zed</a>    </li>
@@ -341,8 +340,8 @@
 <li><a target="_blank" rel="noopener" href="https://www.google.com/chrome/dr/download">Google Chrome</a></li>
 <li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Visual Studio Code</a><br>  我使用的主题  <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=iwyvi.chinolor">Chinolor Theme</a>  <!-- 查看当前安装扩展 `bash code --list-extensions` --></li>
 <li>Android Studio 开发移动端 App<br>  我使用的主题   Mariana Pro Theme 和 喜欢的配色方案 <a href="http://mietl.github.io/files/chinolor.icls">Chinolor.icls</a>    <!-- - [GitButler](https://gitbutler.com/)    --></li>
-<li><a target="_blank" rel="noopener" href="http://www.usebruno.com/">Bruno</a>  - 开源 IDE，测试 API工具。<br><code>brew install bruno</code></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/DevToys-app/DevToys">DevToys</a> 开发者的瑞士军刀， 里面的智能检测 根据剪贴板内容自动检测最佳工具，我觉得很赞<br><code>brew install --cask devtoys</code></li>
+<li><a target="_blank" rel="noopener" href="http://www.usebruno.com/">Bruno</a>  - 开源 IDE，测试 API 工具。<br><code>brew install bruno</code></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/DevToys-app/DevToys">DevToys</a> 开发者的瑞士军刀，里面的智能检测 根据剪贴板内容自动检测最佳工具，我觉得很赞<br><code>brew install --cask devtoys</code></li>
 <li>Proxyman 抓包工具 界面美观、易用，支持 SSL 解密</li>
 <li>Beyond Compare 强大的文件和文件夹对比工具</li>
 </ul>
@@ -361,7 +360,7 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/Caldis/Mos">Mos</a>  开源 让鼠标平滑，反向滚动   </li>
 <li>Proxifier  全局代理  <!-- 3CWNN-WYTP4-SD83W-ASDFR-84KEA --></li>
 <li>SoundSource 声音控制软件，可以控制单个应用声音大小  </li>
-<li><a target="_blank" rel="noopener" href="https://z.weixin.qq.com/">微信输入法</a> 简洁的输入法， 支持跨设备(手机&#x2F;电脑)复制粘贴</li>
+<li><a target="_blank" rel="noopener" href="https://z.weixin.qq.com/">微信输入法</a> 简洁的输入法，支持跨设备 (手机&#x2F;电脑) 复制粘贴</li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/ipreview-%E5%BC%BA%E5%A4%A7%E5%A5%BD%E7%94%A8%E7%9A%84quick-look%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/id1519213509?mt=12">iPreview</a> - 强大的快捷预览扩展程序   </li>
 <li>Caffeinated  保持 Mac 醒着的小工具，防止自动休眠或屏幕变暗</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/ejbills/DockDoor">DockDoor</a> 类似 windows 预览窗口<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/dockPeek1920.png" alt="dockPeek" data-caption="dockPeek" loading="lazy"></li>
@@ -389,7 +388,7 @@
 <li>PasteNow  好用的剪贴板工具  </li>
 <li><a target="_blank" rel="noopener" href="https://wl879.github.io/apps/picview/">PictureView</a> 免费的图片浏览工具</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/lihaoyun6/QuickRecorder">QuickRecorder</a>  开源的录屏软件<br>  <code>brew install lihaoyun6/tap/quickrecorder </code></li>
-<li><a target="_blank" rel="noopener" href="https://www.raycast.com/">Raycast</a> 应用快捷启动器、 支持很多扩展 、 剪贴板、窗口管理等<br>  <code>brew install --cask raycast </code></li>
+<li><a target="_blank" rel="noopener" href="https://www.raycast.com/">Raycast</a> 应用快捷启动器、支持很多扩展、剪贴板、窗口管理等<br>  <code>brew install --cask raycast </code></li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/xnip-%E6%88%AA%E5%9B%BE-%E6%A0%87%E6%B3%A8/id1221250572?mt=12">Xnip</a> 免费的截图软件，支持长截图，好看   </li>
 <li><a target="_blank" rel="noopener" href="https://github.com/localsend/localsend">LocalSend</a> 免费、开源、跨平台 文件共享到附近的设备</li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/bob-%E7%BF%BB%E8%AF%91%E5%92%8C-ocr-%E5%B7%A5%E5%85%B7/id1630034110?mt=12">Bob</a> 支持截图翻译、OCR 识别和多语言翻译的工具，功能强大   </li>
@@ -404,6 +403,7 @@
 <h3 id="💬-社交"><a href="#💬-社交" class="headerlink" title="💬 社交"></a>💬 社交</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://mac.weixin.qq.com/">WeChat</a>  聊天   </li>
 <li>Mimestream  好用的 Gmail 邮箱</li>
+<li><a target="_blank" rel="noopener" href="https://www.filomail.com/">Filo</a> </li>
 <li>Discord<br><code>brew install --cask discord </code></li>
 <li>Telegram<br><code>brew install --cask telegram</code></li>
 <li>TencentMeeting - 腾讯会议 开会讨论</li>
@@ -411,12 +411,12 @@
 <h3 id="📦-不常用"><a href="#📦-不常用" class="headerlink" title="📦 不常用"></a>📦 不常用</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/mulaRahul/keyviz">keyviz</a> 在屏幕上显示，你正在按下的键</li>
 <li><a target="_blank" rel="noopener" href="https://marta.sh/">Marta</a>  - 双窗格文件管理<br>  <code>brew install --cask marta</code></li>
-<li><a target="_blank" rel="noopener" href="https://riffo.ai/">Riffo</a> 通过 AI识别文件内容并重命名文件名   </li>
+<li><a target="_blank" rel="noopener" href="https://riffo.ai/">Riffo</a> 通过 AI 识别文件内容并重命名文件名   </li>
 <li>Maipo  微博 Mac 客户端</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/MochiDiffusion/MochiDiffusion">Mochi Diffusion</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/huggingface/chat-macOS">HuggingChat</a><br><code>brew install --cask huggingchat</code> </li>
 <li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/%E5%88%98%E6%B5%B7%E6%8C%89%E9%92%AE-%E9%9A%90%E8%97%8F%E5%9C%A8%E4%B8%91%E9%99%8B%E5%88%98%E6%B5%B7%E5%90%8E%E7%9A%84%E7%BE%8E%E4%B8%BD%E6%8C%89%E9%92%AE-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%9F%E8%83%BD%E6%8C%89%E9%92%AE/id6447055708?mt=12">MagicNotch</a> 菜单栏刘海，快捷按钮操作    </li>
-<li><del>Things3</del>  好看的任务清单ToDo软件</li>
+<li><del>Things3</del>  好看的任务清单 ToDo 软件</li>
 <li><del><a target="_blank" rel="noopener" href="https://github.com/Ranchero-Software/NetNewsWire">NetNewsWire</a>  开源免费的 RSS 阅读器</del> </li>
 <li><del><a target="_blank" rel="noopener" href="https://rainbowbyte.com/">彩虹工具箱</a> 一些小工具</del></li>
 <li><del>Fleet</del></li>
@@ -424,6 +424,10 @@
 </ul>
 <h3 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://cli.github.com/">GitHub-cli</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/MrLesk/Backlog.md">backlog</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/XAMPPRocky/tokei">tokie</a> 快速计算代码行数</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/google-gemini/gemini-cli">gemini</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code">claude-code</a></li>
 </ul>
 <h3 id="编程字体"><a href="#编程字体" class="headerlink" title="编程字体"></a>编程字体</h3><p><a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode">FiraCode</a></p>
 <h2 id="破解站"><a href="#破解站" class="headerlink" title="破解站"></a>破解站</h2><ul>
@@ -432,21 +436,23 @@
 </ul>
 <h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/corpnewt/gibMacOS">GitHub - corpnewt&#x2F;gibMacOS: Py2&#x2F;py3 script that can download macOS components direct from Apple</a>    </li>
-<li><a target="_blank" rel="noopener" href="https://qiuchenlyopensource.github.io/Documentaions/starter-topic.html">Mac软件注入 | InjectLib</a></li>
+<li><a target="_blank" rel="noopener" href="https://qiuchenlyopensource.github.io/Documentaions/starter-topic.html">Mac 软件注入 | InjectLib</a></li>
 </ul>
 <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>  <kbd>command</kbd> + <kbd>option</kbd> + <kbd>x</kbd> 剪贴文件 </p>
 <h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ol>
 <li>访达 <kbd>command</kbd> 键 + 拖动软件 可以将软件图标添加到访达顶部，快捷使用<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/top_icon.png" alt="image.png" data-caption="image.png" loading="lazy">    </li>
 <li><kbd>option</kbd> 键  + 拖动访达窗口大小，可以记录窗口大小，下次打开&#x2F;新建窗口时，还是之前拖动的大小   </li>
-<li>在 ~&#x2F;Users&#x2F; 用户名下 创建 <strong>Developer</strong> 目录,系统会自动添加锤子图标，你可以将他添加到边栏<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </li>
+<li>在 ~&#x2F;Users&#x2F; 用户名下 创建 <strong>Developer</strong> 目录，系统会自动添加锤子图标，你可以将他添加到边栏<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </li>
 <li>长按 <kbd>option</kbd> 键后 点击日期，可以打开勿扰模式<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/menubar.jpg" alt="menubar.png" data-caption="menubar.png" loading="lazy"></li>
-<li>终端代理 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D"># 1082 为代理端口号，替换成你代理软件的端口 </span></span>
-<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> https_proxy</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">http://127.0.0.1:1082</span><span style="color: #E1E4E8">;</span></span>
-<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> http_proxy</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">http://127.0.0.1:1082</span><span style="color: #E1E4E8">;</span></span>
-<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> all_proxy</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">socks5://127.0.0.1:1082</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure></li>
+<li>终端代理</li>
 </ol>
+<pre><code class="bash"># 1082 为代理端口号，替换成你代理软件的端口 
+export https_proxy=http://127.0.0.1:1082;
+export http_proxy=http://127.0.0.1:1082;
+export all_proxy=socks5://127.0.0.1:1082;
+</code></pre>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023年🧑‍💻工程师的 Mac 工具箱2023年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>   </li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023 年🧑‍💻工程师的 Mac 工具箱 2023 年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>   </li>
 <li><a target="_blank" rel="noopener" href="https://g4ti0r.github.io/wiki/Mac/index.html">终极配置教程</a></li>
 </ol>
 
@@ -475,7 +481,7 @@
 </div>
     
     
-      <script async src="/js/copy-codeblock.js?v=1751829745455"></script>
+      <script async src="/js/copy-codeblock.js?v=1753062553521"></script>
     
   
     
@@ -519,25 +525,4 @@
             <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
         </div>
     </div>
-</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div><!-- hexo injector body_end start -->
-  <script>
-  const CODE_CONFIG = {
-    beautify: undefined,
-    highlightCopy: undefined,
-    highlightLang: undefined,
-    highlightHeightLimit: undefined,
-    isHighlightShrink: undefined,
-    copy: {
-      success: 'undefined',
-      error: 'undefined',
-      noSupport: 'undefined',
-    }
-  };
-  console.log(
-    `%c hexo-shiki-plugin %c v1.0.27 %c https://github.com/nova1751/hexo-shiki-plugin`,
-    "color: #fff; background: #5f5f5f",
-    "color: #fff; background: #80c8f8",
-    ""
-  );
-  </script>
-  <!-- hexo injector body_end end --></body></html>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
