@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://mietl.github.io/images/macos/developer.png">
 <meta property="og:image" content="http://mietl.github.io/images/macos/menubar.jpg">
 <meta property="article:published_time" content="2024-08-26T11:30:02.000Z">
-<meta property="article:modified_time" content="2025-07-21T06:53:01.648Z">
+<meta property="article:modified_time" content="2025-07-21T07:30:50.202Z">
 <meta property="article:author" content="mietl">
 <meta property="article:tag" content="MacOS">
 <meta name="twitter:card" content="summary">
@@ -28,15 +28,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1753080798883">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1753083076447">
 
-<link rel="stylesheet" href="/css/style.css?v=1753080798883">
+<link rel="stylesheet" href="/css/style.css?v=1753083076447">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1753080798883">
+        <link rel="stylesheet" href="/custom.css?v=1753083076447">
     
 
 
@@ -46,11 +46,16 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1753080798884"></script>
+<script async src="/js/app.js?v=1753083076447"></script>
 
  
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> <script src="https://jjonline.github.io/calendar.js/dist/js-calendar-converter.js"></script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/css/shiki-code.css">
+<script>
+      document.documentElement.dataset.lightShiki = 'dark-shiki';
+      document.documentElement.dataset.darkShiki = 'light-shiki';
+    </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="T:DM" type="application/atom+xml">
 </head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/images/cover/cover.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="mietl"><img src="/images/avatar.jpg" alt="mietl"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
   <div class="nexmoe-avatar mdui-ripple">
     <a href="/" title="mietl">
@@ -295,34 +300,103 @@
 <h3 id="键盘设置"><a href="#键盘设置" class="headerlink" title="键盘设置"></a>键盘设置</h3><p>键盘 -&gt; 键重复速率和重复前延迟拉到最大</p>
 <h3 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h3><p>打开系统偏好设置-&gt;触控板-&gt;光标与点按<br>勾选 ✔ 轻点来点按<br>跟踪速度移动到最快</p>
 <p>辅助功能-&gt;指针控制 - 触控板选项<br>勾选 ✔ 使用触控板进行拖移<br>拖拽样式选择三指拖移</p>
-<h2 id="开发配置"><a href="#开发配置" class="headerlink" title="开发配置"></a>开发配置</h2><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><pre><code class="bash"># 配置用户名
-git config --global user.name &quot;mietl&quot;
-# 配置邮箱 
-git config --global user.email &quot;mietl.moe@icloud.com&quot;
-</code></pre>
-<h4 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h4><pre><code class="bash">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
-</code></pre>
-<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><pre><code class="bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</code></pre>
-<p>安装成功后按照提示终端执行</p>
-<pre><code class="bash">echo &#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39; &gt;&gt; ~/.zprofile
-eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot; 
-</code></pre>
-<p>安装 cask 用于后续安装软件</p>
-<pre><code class="bash">brew install cask
-</code></pre>
-<h4 id="zshenv"><a href="#zshenv" class="headerlink" title=".zshenv"></a>.zshenv</h4><p>我的环境变量都写在这个文件</p>
-<pre><code class="bash">#进入用户目录
-cd ~/ 
-wget https://raw.githubusercontent.com/mietl/dotfiles/main/.zshenv
-</code></pre>
-<h4 id="starship-美化终端提示"><a href="#starship-美化终端提示" class="headerlink" title="starship 美化终端提示"></a>starship 美化终端提示</h4><pre><code class="bash">brew install starship
-echo &#39;eval &quot;$(starship init zsh)&quot;&#39; &gt;&gt; ~/.zshrc
+<h2 id="开发配置"><a href="#开发配置" class="headerlink" title="开发配置"></a>开发配置</h2><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4>
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#617172;--shiki-dark:#A4ACA7"># 配置用户名</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">git</span><span style="color:#F9D367;--shiki-dark:#B78D12"> config</span><span style="color:#F9D367;--shiki-dark:#B78D12"> --global</span><span style="color:#F9D367;--shiki-dark:#B78D12"> user.name</span><span style="color:#F9D367;--shiki-dark:#B78D12"> "mietl"</span></span>
+<span class="line"><span style="color:#617172;--shiki-dark:#A4ACA7"># 配置邮箱 </span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">git</span><span style="color:#F9D367;--shiki-dark:#B78D12"> config</span><span style="color:#F9D367;--shiki-dark:#B78D12"> --global</span><span style="color:#F9D367;--shiki-dark:#B78D12"> user.email</span><span style="color:#F9D367;--shiki-dark:#B78D12"> "mietl.moe@icloud.com"</span></span></code></pre>
+              </figure>
+        
 
-mkdir -p ~/.config
-cd ~/.config
-wget https://raw.githubusercontent.com/mietl/dotfiles/main/starship.toml
-</code></pre>
+<h4 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h4>
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">sh</span><span style="color:#F9D367;--shiki-dark:#B78D12"> -c</span><span style="color:#F9D367;--shiki-dark:#B78D12"> "$(</span><span style="color:#8ABCD1;--shiki-dark:#1781B5">curl</span><span style="color:#F9D367;--shiki-dark:#B78D12"> -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span></span></code></pre>
+              </figure>
+        
+
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4>
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">/bin/bash</span><span style="color:#F9D367;--shiki-dark:#B78D12"> -c</span><span style="color:#F9D367;--shiki-dark:#B78D12"> "$(</span><span style="color:#8ABCD1;--shiki-dark:#1781B5">curl</span><span style="color:#F9D367;--shiki-dark:#B78D12"> -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span></span></code></pre>
+              </figure>
+        
+<p>安装成功后按照提示终端执行</p>
+
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">echo</span><span style="color:#F9D367;--shiki-dark:#B78D12"> 'eval "$(/opt/homebrew/bin/brew shellenv)"'</span><span style="color:#D276A3;--shiki-dark:#CC5595"> >></span><span style="color:#F9D367;--shiki-dark:#B78D12"> ~/.zprofile</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">eval</span><span style="color:#F9D367;--shiki-dark:#B78D12"> "$(</span><span style="color:#8ABCD1;--shiki-dark:#1781B5">/opt/homebrew/bin/brew</span><span style="color:#F9D367;--shiki-dark:#B78D12"> shellenv)"</span></span></code></pre>
+              </figure>
+         
+
+<p>安装 cask 用于后续安装软件</p>
+
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">brew</span><span style="color:#F9D367;--shiki-dark:#B78D12"> install</span><span style="color:#F9D367;--shiki-dark:#B78D12"> cask</span></span></code></pre>
+              </figure>
+        
+
+<h4 id="zshenv"><a href="#zshenv" class="headerlink" title=".zshenv"></a>.zshenv</h4><p>我的环境变量都写在这个文件</p>
+
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#617172;--shiki-dark:#A4ACA7">#进入用户目录</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">cd</span><span style="color:#F9D367;--shiki-dark:#B78D12"> ~/</span><span style="color:#E4DFD7;--shiki-dark:#2B312C"> </span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">wget</span><span style="color:#F9D367;--shiki-dark:#B78D12"> https://raw.githubusercontent.com/mietl/dotfiles/main/.zshenv</span></span></code></pre>
+              </figure>
+        
+
+<h4 id="starship-美化终端提示"><a href="#starship-美化终端提示" class="headerlink" title="starship 美化终端提示"></a>starship 美化终端提示</h4>
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">brew</span><span style="color:#F9D367;--shiki-dark:#B78D12"> install</span><span style="color:#F9D367;--shiki-dark:#B78D12"> starship</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">echo</span><span style="color:#F9D367;--shiki-dark:#B78D12"> 'eval "$(starship init zsh)"'</span><span style="color:#D276A3;--shiki-dark:#CC5595"> >></span><span style="color:#F9D367;--shiki-dark:#B78D12"> ~/.zshrc</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">mkdir</span><span style="color:#F9D367;--shiki-dark:#B78D12"> -p</span><span style="color:#F9D367;--shiki-dark:#B78D12"> ~/.config</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">cd</span><span style="color:#F9D367;--shiki-dark:#B78D12"> ~/.config</span></span>
+<span class="line"><span style="color:#8ABCD1;--shiki-dark:#1781B5">wget</span><span style="color:#F9D367;--shiki-dark:#B78D12"> https://raw.githubusercontent.com/mietl/dotfiles/main/starship.toml</span></span></code></pre>
+              </figure>
+        
+
 <h2 id="我的-App"><a href="#我的-App" class="headerlink" title="我的 App"></a>我的 App</h2><h3 id="📖-阅读"><a href="#📖-阅读" class="headerlink" title="📖 阅读"></a>📖 阅读</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://skim-app.sourceforge.io/">Skim</a> 简单的 PDF 阅读 </li>
 <li><a target="_blank" rel="noopener" href="https://arc.net/">Arc</a> 好看实用浏览器<br><code>brew install --cask arc</code></li>
@@ -444,13 +518,21 @@ wget https://raw.githubusercontent.com/mietl/dotfiles/main/starship.toml
 <li><kbd>option</kbd> 键  + 拖动访达窗口大小，可以记录窗口大小，下次打开&#x2F;新建窗口时，还是之前拖动的大小   </li>
 <li>在 ~&#x2F;Users&#x2F; 用户名下 创建 <strong>Developer</strong> 目录，系统会自动添加锤子图标，你可以将他添加到边栏<br>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/developer.png" alt="developer.png" data-caption="developer.png" loading="lazy"> </li>
 <li>长按 <kbd>option</kbd> 键后 点击日期，可以打开勿扰模式<br> <img onerror="imgOnError(this);" data-fancybox="gallery" src="http://mietl.github.io/images/macos/menubar.jpg" alt="menubar.png" data-caption="menubar.png" loading="lazy"></li>
-<li>终端代理</li>
+<li>终端代理 
+              <figure class="hexo-shiki-code lang line-numbers" >
+                  <figcaption class="title-bar">
+                    <span class="shiki-lang-label">bash </span>
+                    <button class="shiki-copy-button" onclick="copyShikiCode(this)">
+                      <span class="button-text">复制</span>
+                    </button>
+                  </figcaption>
+                  <pre class="shiki shiki-themes Chinolor Chinolor Light" style="background-color:#2b312c;--shiki-dark-bg:#f8f4ed;color:#e4dfd7;--shiki-dark:#2b312c" tabindex="0"><code><span class="line"><span style="color:#617172;--shiki-dark:#A4ACA7"># 1082 为代理端口号，替换成你代理软件的端口 </span></span>
+<span class="line"><span style="color:#D276A3;--shiki-dark:#CC5595">export</span><span style="color:#E4DFD7;--shiki-dark:#2B312C"> https_proxy</span><span style="color:#D276A3;--shiki-dark:#CC5595">=</span><span style="color:#E4DFD7;--shiki-dark:#2B312C">http://127.0.0.1:1082;</span></span>
+<span class="line"><span style="color:#D276A3;--shiki-dark:#CC5595">export</span><span style="color:#E4DFD7;--shiki-dark:#2B312C"> http_proxy</span><span style="color:#D276A3;--shiki-dark:#CC5595">=</span><span style="color:#E4DFD7;--shiki-dark:#2B312C">http://127.0.0.1:1082;</span></span>
+<span class="line"><span style="color:#D276A3;--shiki-dark:#CC5595">export</span><span style="color:#E4DFD7;--shiki-dark:#2B312C"> all_proxy</span><span style="color:#D276A3;--shiki-dark:#CC5595">=</span><span style="color:#E4DFD7;--shiki-dark:#2B312C">socks5://127.0.0.1:1082;</span></span></code></pre>
+              </figure>
+        </li>
 </ol>
-<pre><code class="bash"># 1082 为代理端口号，替换成你代理软件的端口 
-export https_proxy=http://127.0.0.1:1082;
-export http_proxy=http://127.0.0.1:1082;
-export all_proxy=socks5://127.0.0.1:1082;
-</code></pre>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
 <li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7292428123849293887">2023 年🧑‍💻工程师的 Mac 工具箱 2023 年工程师必备的 Mac 软件清单 &#x2F; 订阅技巧分享，帮助你提高生产力 - 掘金</a>   </li>
 <li><a target="_blank" rel="noopener" href="https://g4ti0r.github.io/wiki/Mac/index.html">终极配置教程</a></li>
@@ -523,4 +605,6 @@ export all_proxy=socks5://127.0.0.1:1082;
             <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
         </div>
     </div>
-</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div><!-- hexo injector body_end start -->
+<script src="/js/shiki-code.js"></script>
+<!-- hexo injector body_end end --></body></html>

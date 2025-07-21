@@ -1,0 +1,257 @@
+/* Shiki 代码块样式  */
+figure.hexo-shiki-code {
+  margin: 1.5em 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+figure.hexo-shiki-code figcaption {
+  padding: 7px 14px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Fira Code", monospace;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+
+
+
+
+.light-shiki figure.hexo-shiki-code figcaption {
+  background: rgb(221, 221, 221);
+  color: rgba(51, 51, 51);
+  border-bottom: 1px solid rgba(228, 223, 215, 0.1);
+}
+
+.dark-shiki figure.hexo-shiki-code figcaption {
+  background-color: rgb(60, 60, 60);
+  color: rgb(204, 204, 204);
+  border-bottom: 1px solid rgba(228, 223, 215, 0.1);
+}
+
+
+
+
+
+
+figure.hexo-shiki-code pre {
+  margin: 0 !important;
+  padding: 16px !important;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace !important;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+figure.hexo-shiki-code.line-numbers pre {
+  padding-left: 20px !important;
+}
+
+
+/* 滚动条样式 */
+figure.hexo-shiki-code pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+figure.hexo-shiki-code pre::-webkit-scrollbar-track {
+  background: rgba(228, 223, 215, 0.1);
+  border-radius: 3px;
+}
+
+figure.hexo-shiki-code pre::-webkit-scrollbar-thumb {
+  background: rgba(228, 223, 215, 0.3);
+  border-radius: 3px;
+}
+
+figure.hexo-shiki-code pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(228, 223, 215, 0.5);
+}
+
+
+.hexo-shiki-code .shiki-copy-button {
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 64px;
+  height: 28px;
+  justify-content: center;
+  position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: scale(0.95);
+}
+
+.dark-shiki .hexo-shiki-code .shiki-copy-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: rgba(221, 221, 221);
+}
+
+.light-shiki .hexo-shiki-code .shiki-copy-button {
+  background: #fff;
+  border: 1px solid #D7D7BD;
+  transform: translateY(0) scale(1);
+}
+
+.dark-shiki .hexo-shiki-code .shiki-copy-button::before  {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.75)' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='13' height='13' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.light-shiki .hexo-shiki-code .shiki-copy-button::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.75)' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='13' height='13' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.hexo-shiki-code .shiki-copy-button::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  flex-shrink: 0;
+}
+
+/* 按钮悬停效果 */
+.dark-shiki .hexo-shiki-code .shiki-copy-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 按钮点击效果 */
+.hexo-shiki-code .shiki-copy-button:active {
+  transform: translateY(0) scale(0.98);
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.1s ease;
+}
+
+
+
+/* 复制成功状态 */
+.hexo-shiki-code .shiki-copy-button.copied {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.25);
+  color: rgba(16, 185, 129, 0.95);
+  transform: translateY(0) scale(1);
+}
+
+/* 复制错误状态 */
+.hexo-shiki-code .shiki-copy-button.error {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: rgba(239, 68, 68, 0.95);
+  transform: translateY(0) scale(1);
+  animation: shake 0.5s ease-in-out;
+}
+
+.hexo-shiki-code .shiki-copy-button.error::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='rgba(239,68,68,0.95)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='15' y1='9' x2='9' y2='15'%3E%3C/line%3E%3Cline x1='9' y1='9' x2='15' y2='15'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.hexo-shiki-code .shiki-copy-button.copied::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='rgba(16,185,129,0.95)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20,6 9,17 4,12'%3E%3C/polyline%3E%3C/svg%3E");
+  animation: checkmarkBounce 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 复制成功动画 */
+@keyframes checkmarkBounce {
+  0% {
+    transform: scale(0.8) rotate(-8deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+/* 复制按钮文字动画 */
+.hexo-shiki-code .shiki-copy-button .button-text {
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hexo-shiki-code .shiki-copy-button.copied .button-text,
+.hexo-shiki-code .shiki-copy-button.copied::before {
+  animation: textSlideUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+@keyframes textSlideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.hexo-shiki-code.line-numbers {
+  counter-reset: line;
+}
+
+.hexo-shiki-code.line-numbers code>.line {
+  position: relative;
+}
+
+.hexo-shiki-code.line-numbers code>.line::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: -2.5em;
+  width: 2em;
+  text-align: right;
+  color: #888;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    /* Optional, if you also want font styles */
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+
+}
